@@ -14,7 +14,7 @@ engineering principles at work in here.
 Take a peek!
 ```
 
-[VIDEO](https://www.youtube.com/watch?v=7a97zIXLQ7Q)
+[VIDEO](https://www.youtube.com/watch?v=7a97zIXLQ7Q) <br/>
 [Source](https://github.com/WilliamASease/Mode7Game)
 
 ```{}
@@ -22,3 +22,5 @@ One of my proudest accomplishments has been clenching Apphack X with the help
 of three great friends. @swansonmp keeps what we made in this repository with
 lovely documentation.
 ```
+
+[LINK](https://github.com/swansonmp/tetrisGalaxy)
