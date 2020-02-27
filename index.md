@@ -14,7 +14,7 @@ engineering principles at work in here.
 Take a peek!
 ```
 
-[VIDEO](https://www.youtube.com/watch?v=7a97zIXLQ7Q) <br/>
+[VIDEO](https://www.youtube.com/watch?v=7a97zlXLQ7Q) <br/>
 [Source](https://github.com/WilliamASease/Mode7Game)
 
 ```{}
