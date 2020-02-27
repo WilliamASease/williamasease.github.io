@@ -12,10 +12,10 @@ I'm flattered! Here's some practical examples of my programming skills:
 Here's a game I wrote in Java-Swing. There's loads of data structures and software
 engineering principles at work in here.
 Take a peek!
+```
 
 [VIDEO](https://www.youtube.com/watch?v=7a97zIXLQ7Q)
 [Source](https://github.com/WilliamASease/Mode7Game)
-```
 
 ```{}
 One of my proudest accomplishments has been clenching Apphack X with the help
