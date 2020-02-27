@@ -9,7 +9,7 @@ I'm flattered! Here's some practical examples of my programming skills:
 ```
 
 ```{}
-Here's a game I wrote in Java-Swing. There's loads of data structures and software
+Here's a game I wrote in Java-Swing (Only the native libraries). There's loads of data structures and software
 engineering principles at work in here.
 Take a peek!
 ```
