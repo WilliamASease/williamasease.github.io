@@ -1,16 +1,16 @@
 <html>
 <head>
 <link rel="stylesheet" href="index.css">
-<script src = "index.js"></script>
+<script defer src = "index.js"></script>
 </head>
 <body>
 
 <div id = "topContainer">
     <div></div>
     <div id = "Title">
-        <h2><i>Right Honorable!</i></h2>
+        <h2><i id = "adjective">Right Honorable!</i></h2>
         <h1>Mr. William A. Sease</h1>
-        <h3>"<strike>Graphic Design</strike> Software is my passion"</h3>
+        <h3>"<strike id ="formerPassion">Graphic Design</strike> Software is my passion"</h3>
     </div>
     <div>
         <img id="portrait" src= "Portrait.png" alt="me"></image>
@@ -19,14 +19,21 @@
 </div>
 
 <ul id = "nav">
-    <li>Github</li>
-    <li>LinkedIn</li>
-    <li>Resume</li>
+    <li><a href = "https://github.com/WilliamASease">Github</a></li>
+    <li><a href = "https://www.linkedin.com/in/william-sease-907bb219a?trk=people-guest_people_search-card">LinkedIn</a></li>
+    <li><a href= "seaseResume.pdf">Resume</a></li>
 </ul>
 
 
 <div id = "tabFrame">
-    <p>You shouldn't be seeing this. Javascript did a big oopsie if this is still here. I want like this to be a manilla folder and you can tab between different parts of the resume.</p>
+    <div id = "tabContainer">
+        <ul id = "tabs">
+            <li>Skills</li><li>Education</li><li>Accomplishments</li><li>Leadership</li><li>Work Experience</li>
+        </ul>
+    </div>
+    <div id = "tabContent">
+    fffffffffffffffffffff
+    </div>
 </div>
 </body>
 </html>
