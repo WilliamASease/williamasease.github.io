@@ -8,7 +8,7 @@ W Unity with C#
 
 B Untitled Java Game
 W Java with Swing
-W Simple tech demo featuring 3D rendering on low tech machines!
+W Simple tech demo featuring 3D rendering on low spec machines!
 W https://www.youtube.com/watch?v=7a97zlXLQ7Q
 
 Other code samples and in-progress projects at WilliamASease.github.io
