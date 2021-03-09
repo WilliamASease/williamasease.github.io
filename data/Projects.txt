@@ -3,7 +3,7 @@ W Apphack X 1st Prize
 W Wrote the Java-Swing frontend for a game created in a strict timeframe
 
 B Rogolf -- Developer
-W Play it at student2.cs.appstate.edu/rogolf
+W Play it at student2.cs.appstate.edu/seasewa/rogolf
 W Unity with C#
 
 B Untitled Java Game
