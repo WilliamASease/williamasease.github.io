@@ -17,4 +17,4 @@ W Simple tech demo featuring 3D rendering on low spec machines!
 W https://www.youtube.com/watch?v=7a97zlXLQ7Q
 W https://github.com/WilliamASease/Mode7Game <- Try it!
 
-W Other code samples and in-progress projects at WilliamASease.github.io
+B Other code samples and in-progress projects at WilliamASease.github.io
