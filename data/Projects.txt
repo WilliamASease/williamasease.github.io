@@ -11,10 +11,10 @@ B Rogolf -- Developer
 W Play it IN BROWSER at student2.cs.appstate.edu/seasewa/rogolf <- Try it!
 W Unity with C#
 
-B Untitled Java Game
+B Java Mode7 Demo
 W Java with Swing
 W Simple tech demo featuring 3D rendering on low spec machines!
 W https://www.youtube.com/watch?v=7a97zlXLQ7Q
 W https://github.com/WilliamASease/Mode7Game <- Try it!
 
-B Other code samples and in-progress projects at WilliamASease.github.io
+B Other code samples and in-progress projects at https://github.com/WilliamASease
