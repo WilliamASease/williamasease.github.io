@@ -1,17 +1,18 @@
 import { Anchor } from "../../Generic/Anchor";
 import { FlexElement } from "../../Generic/FlexElement";
-import { TextElement } from "../../Generic/TextElement";
 
 export const References = () => {
   return (
     <FlexElement orientation={"COL"} enforceAlign>
       <FlexElement orientation="ROW">
-        <Anchor text={"github"} link={""} />
-        <Anchor text={"linkedin"} link={""} />
+        <Anchor text={"github"} link={"https://github.com/WilliamASease"} />
         <Anchor
-          text={"resume (PDF)"}
-          link={"../../../public/seaseResume.pdf"}
+          text={"linkedin"}
+          link={
+            "https://www.linkedin.com/in/william-sease-907bb219a?trk=people-guest_people_search-card"
+          }
         />
+        <Anchor text={"resume (PDF)"} link={"../../public/seaseResume.pdf"} />
       </FlexElement>
     </FlexElement>
   );
