@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 type IProps = {
   orientation: "COL" | "ROW";
-  enforceAlign: boolean;
+  enforceAlign?: boolean;
   children: ReactNode;
 };
 
