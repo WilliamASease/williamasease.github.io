@@ -1,9 +1,47 @@
+import { Button } from "../../Generic/Button";
 import { FlexElement } from "../../Generic/FlexElement";
+import { contentType } from "../Main";
 
-export const ContentSelector = () => {
+type IProps = {
+  setContent: React.Dispatch<React.SetStateAction<contentType>>;
+};
+
+export const ContentSelector = (props: IProps) => {
+  const { setContent } = props;
   return (
     <FlexElement orientation={"COL"} enforceAlign>
-      Content.
+      <FlexElement orientation="ROW">
+        <Button
+          text={"Skills"}
+          onPress={() => {
+            setContent("skills");
+          }}
+        />
+        <Button
+          text={"Education"}
+          onPress={() => {
+            setContent("education");
+          }}
+        />
+        <Button
+          text={"Accomplishments"}
+          onPress={() => {
+            setContent("accomplishments");
+          }}
+        />
+        <Button
+          text={"Work Experience"}
+          onPress={() => {
+            setContent("workexperience");
+          }}
+        />
+        <Button
+          text={"ぷよぷよ"}
+          onPress={() => {
+            setContent("puyo");
+          }}
+        />
+      </FlexElement>
     </FlexElement>
   );
 };

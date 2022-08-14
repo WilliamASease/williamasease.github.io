@@ -1,5 +1,3 @@
-import { TextElement } from "./TextElement";
-
 type IProps = {
   text: string;
   link: string;
@@ -10,7 +8,7 @@ export const Anchor = (props: IProps) => {
   return (
     <div>
       <a href={link}>
-        <TextElement size="small" text={text} />
+        <div className="linkElement">{text}</div>
       </a>
     </div>
   );

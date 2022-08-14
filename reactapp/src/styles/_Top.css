@@ -4,6 +4,12 @@
   font-family: "Courier New", Courier, monospace;
   padding: 0 1rem; }
 
+.linkElement {
+  color: black;
+  background-color: white;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0 1rem; }
+
 .textElement {
   border: solid black 1px;
   color: black;
@@ -23,6 +29,9 @@
 
 .enforceAlign {
   align-items: center; }
+
+.border {
+  border: solid grey 2px; }
 
 .main {
   height: 100%;

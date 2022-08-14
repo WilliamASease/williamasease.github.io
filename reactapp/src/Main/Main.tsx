@@ -1,15 +1,26 @@
 import { useEffect, useState } from "react";
-import { Button } from "../Generic/Button";
 import { Splash } from "./Splash/Splash";
 import { colorMutate } from "../Utils/BackgroundFun";
 import { NamePlate } from "./Body/NamePlate";
 import { ContentSelector } from "./Body/ContentSelector";
 import { ContentBody } from "./Body/ContentBody";
 import { References } from "./Body/References";
+
+export type contentType =
+  | "none"
+  | "skills"
+  | "education"
+  | "projects"
+  | "accomplishments"
+  | "workexperience"
+  | "puyo";
+
 export const Main = () => {
   const [backgroundColor, setBackgroundColor] = useState("#444444");
 
   const [splashScreen, setSplashScreen] = useState(true);
+
+  const [content, setContent] = useState<contentType>("none");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,8 +39,8 @@ export const Main = () => {
           <div>
             <NamePlate />
             <References />
-            <ContentSelector />
-            <ContentBody />
+            <ContentSelector setContent={setContent} />
+            <ContentBody content={content} />
           </div>
         )}
       </div>

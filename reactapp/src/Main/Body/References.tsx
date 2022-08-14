@@ -12,7 +12,12 @@ export const References = () => {
             "https://www.linkedin.com/in/william-sease-907bb219a?trk=people-guest_people_search-card"
           }
         />
-        <Anchor text={"resume (PDF)"} link={"../../public/seaseResume.pdf"} />
+        <Anchor
+          text={"resume (PDF)"}
+          link={
+            "https://williamasease.github.io/reactapp/public/seaseResume.pdf"
+          }
+        />
       </FlexElement>
     </FlexElement>
   );
