@@ -16,6 +16,7 @@ export const References = () => {
           text={"resume (PDF)"}
           link={"https://williamasease.github.io/seaseResume.pdf"}
         />
+        <Anchor text={"email"} link={"mailto:WilliamASease@gmail.com"} />
       </FlexElement>
     </FlexElement>
   );
