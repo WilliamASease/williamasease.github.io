@@ -1,5 +1,5 @@
 import { TextElement } from "../Generic/TextElement";
 
 export const Puyo = () => {
-  return <TextElement text="Puyo coming soon."></TextElement>;
+  return <TextElement text="Coming soon."></TextElement>;
 };
