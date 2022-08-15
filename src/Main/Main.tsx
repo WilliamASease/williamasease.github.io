@@ -33,7 +33,7 @@ export const Main = () => {
 
   return (
     <div className="main" style={{ backgroundColor: backgroundColor }}>
-      <div style={{ paddingTop: 100 }}>
+      <div style={{ paddingTop: 100, maxWidth: "700px" }}>
         {splashScreen ? (
           <Splash setSplashScreen={setSplashScreen} />
         ) : (
