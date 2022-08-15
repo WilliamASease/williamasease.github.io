@@ -36,6 +36,12 @@ export const ContentSelector = (props: IProps) => {
           }}
         />
         <Button
+          text={"Projects"}
+          onPress={() => {
+            setContent("projects");
+          }}
+        />
+        <Button
           text={"Work Experience"}
           onPress={() => {
             setContent("workexperience");
