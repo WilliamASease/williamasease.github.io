@@ -8,6 +8,7 @@ import { References } from "./Body/References";
 
 export type contentType =
   | "none"
+  | "photo"
   | "skills"
   | "education"
   | "projects"

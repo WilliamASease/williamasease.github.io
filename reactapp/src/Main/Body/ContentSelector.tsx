@@ -12,6 +12,12 @@ export const ContentSelector = (props: IProps) => {
     <FlexElement orientation={"COL"} enforceAlign>
       <FlexElement orientation="ROW">
         <Button
+          text={"Photo"}
+          onPress={() => {
+            setContent("photo");
+          }}
+        />
+        <Button
           text={"Skills"}
           onPress={() => {
             setContent("skills");

@@ -1,10 +1,13 @@
+import { ReactNode } from "react";
+
 type IProps = {
   text?: string;
   size?: "large" | "medium" | "small";
+  children?: ReactNode;
 };
 
 export const TextElement = (props: IProps) => {
-  const { text, size } = props;
+  const { text, size, children } = props;
 
   const processSize = () => {
     switch (size) {
@@ -22,6 +25,7 @@ export const TextElement = (props: IProps) => {
     <div>
       <div className="textElement" style={{ fontSize: processSize() }}>
         <div>{text}</div>
+        {children}
       </div>
     </div>
   );
