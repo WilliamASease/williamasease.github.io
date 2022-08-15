@@ -64,8 +64,7 @@ export const ContentBody = (props: IProps) => {
             <b>Rogolf -- Developer</b>
           </p>
           <p>
-            Play it IN BROWSER at student2.cs.appstate.edu/seasewa/rogolf &lt;-
-            Try it!
+            Play it in browser at student2.cs.appstate.edu/seasewa/rogolf &lt;-
           </p>
           <p>Unity with C#</p>
           <p>
@@ -92,27 +91,11 @@ export const ContentBody = (props: IProps) => {
             </b>
           </p>
           <p>
-            Worked directly with clients both alone and under the supervision of
-            an IT professional developing solutions for private customers and
-            small businesses
-          </p>
-          <p>
-            Developed skills in maintaining positive client-technician
-            relationships and furthered knowledge of computer systems
-          </p>
-          <p>
-            Became familiar with the relevant ethics of professional IT work
-          </p>
-          <p>
             <b>Apphack X, First Prize, April 2019</b>
           </p>
           <p>
             Tetris Galaxy, a spin on the classic puzzle game, complete with
             real-time graphics
-          </p>
-          <p>
-            Employed teamwork and communication skills to create the project
-            with three teammates
           </p>
           <p>
             <b>
@@ -122,7 +105,6 @@ export const ContentBody = (props: IProps) => {
           </p>
           <p>2019 ICPC Mid-Atlantic regional: 22nd of 154 teams</p>
           <p>2020 ICPC Mid-Atlantic regional: 17th of 84 teams</p>
-          <p>2020 ICPC Mid-Atlantic DIVISIONAL: TBD!</p>
           <p>
             https://mausa19.kattis.com/standings,
             https://mausa20.kattis.com/standings
