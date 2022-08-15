@@ -12,7 +12,10 @@ export const ContentBody = (props: IProps) => {
   return (
     <FlexElement orientation={"COL"} enforceAlign topPadding={5}>
       {content === "photo" && (
-        <image href="https://williamasease.github.io/Portrait.png" />
+        <img
+          src="https://williamasease.github.io/Portrait.png"
+          style={{ borderRadius: 10 }}
+        />
       )}
       {content === "skills" && (
         <TextElement>
