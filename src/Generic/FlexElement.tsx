@@ -17,7 +17,7 @@ export const FlexElement = (props: IProps) => {
         (orientation === "COL" ? "flexColumn" : "flexRow") +
         (enforceAlign ? " enforceAlign" : "")
       }
-      style={{ paddingTop: padding }}
+      style={{ paddingTop: padding, flexWrap: "wrap" }}
     >
       {children}
     </div>
