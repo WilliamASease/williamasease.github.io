@@ -14,9 +14,7 @@ export const References = () => {
         />
         <Anchor
           text={"resume (PDF)"}
-          link={
-            "https://williamasease.github.io/reactapp/public/seaseResume.pdf"
-          }
+          link={"https://williamasease.github.io/seaseResume.pdf"}
         />
       </FlexElement>
     </FlexElement>
