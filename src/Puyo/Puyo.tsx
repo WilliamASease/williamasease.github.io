@@ -7,7 +7,7 @@ import { difficultyType, screenType, songType } from "./PuyoTypes";
 export const Puyo = () => {
   const [screen, setScreen] = useState<screenType>("settings");
   const [difficulty, setDifficulty] = useState<difficultyType>("Medium");
-  const [song, setSong] = useState<songType>("BigInJapan");
+  const [song, setSong] = useState<songType>("Big In Japan");
 
   return (
     <div style={{ width: 600, height: 700, backgroundColor: "black" }}>
