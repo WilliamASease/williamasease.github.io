@@ -12,26 +12,27 @@ type IProps = {
 };
 
 export const PuyoSettings = (props: IProps) => {
-  const [offSet, setOffSet] = useState(700);
+  const [offSet, setOffSet] = useState(99999999);
   useEffect(() => {
     const interval = setInterval(() => {
-      setOffSet(offSet > 0 ? offSet - 1 : 700);
+      setOffSet(offSet < 99999999 ? offSet + 1 : 0);
     }, 25);
     return () => clearInterval(interval);
   });
 
   return (
-    <>
-      <img
-        src="https://williamasease.github.io/puyographics/background.jpg"
-        style={{
-          position: "absolute",
-          transform: `translate(${offSet}px, ${offSet}px)`,
-        }}
-      />
+    <div
+      style={{
+        backgroundImage:
+          "url(https://williamasease.github.io/public/puyographics/background.jpg)",
+        backgroundRepeat: "repeat",
+        backgroundPosition: `right ${offSet}px bottom ${offSet}px `,
+        height: "100%",
+      }}
+    >
       <FlexElement orientation="COL" enforceAlign>
         <TextElement text="Pu Yo Pu Yo" size="large" />
       </FlexElement>
-    </>
+    </div>
   );
 };
