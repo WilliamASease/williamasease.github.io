@@ -59,6 +59,7 @@ export const PuyoSettings = (props: IProps) => {
             text={"Laid Back Puyo"}
             onPress={() => setSong("Laid Back Puyo")}
           />
+          <Button text={"[Mute]"} onPress={() => setSong("Mute")} />
         </FlexElement>
         <Button text={"Start !!!"} onPress={() => setScreen("game")} />
       </FlexElement>
