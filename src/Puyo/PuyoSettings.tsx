@@ -52,15 +52,23 @@ export const PuyoSettings = (props: IProps) => {
             onPress={() => setSong("Big In Japan")}
           />
           <Button
-            text={"Tetris Metal"}
-            onPress={() => setSong("Tetris Metal")}
+            text={"Requiem In D"}
+            onPress={() => setSong("Requiem In D")}
           />
+        </FlexElement>
+        <FlexElement orientation="ROW" enforceAlign>
+          <Button text={"Gymnopedies"} onPress={() => setSong("Gymnopedies")} />
           <Button
             text={"Laid Back Puyo"}
-            onPress={() => setSong("Laid Back Puyo")}
+            onPress={() => setSong("Laid Back Endless Puyo")}
           />
           <Button text={"[Mute]"} onPress={() => setSong("Mute")} />
         </FlexElement>
+        <FlexElement orientation="ROW">
+          <TextElement text="A = Rotate Left" size="small" />
+          <TextElement text="S = Rotate Right" size="small" />
+        </FlexElement>
+        <TextElement text="Arrow Keys = Move" size="small"></TextElement>
         <Button text={"Start !!!"} onPress={() => setScreen("game")} />
       </FlexElement>
     </div>

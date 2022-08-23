@@ -20,7 +20,9 @@ export const Puyo = () => {
           setSong={setSong}
         />
       )}
-      {screen === "game" && <PuyoGame />}
+      {screen === "game" && (
+        <PuyoGame song={song} setScreen={setScreen} difficulty={difficulty} />
+      )}
       {screen === "failure" && <PuyoFailure />}
     </div>
   );
