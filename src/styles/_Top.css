@@ -1,8 +1,14 @@
-.button {
+.needsBackground {
+  border: solid black 1px;
   color: black;
-  background-color: white;
+  background-color: white; }
+
+.button {
   font-family: "Courier New", Courier, monospace;
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  border: solid black 1px;
+  color: black;
+  background-color: white; }
 
 .linkElement {
   color: black;
@@ -11,9 +17,6 @@
   padding: 0 1rem; }
 
 .textElement {
-  border: solid black 1px;
-  color: black;
-  background-color: white;
   font-family: "Courier New", Courier, monospace;
   padding: 0 1rem;
   margin: 0.25rem;
@@ -37,3 +40,25 @@
 .main {
   height: 100%;
   width: 100%; }
+
+.puyo .needsBackground {
+  color: white;
+  background-color: darkblue;
+  border-color: white; }
+
+.puyo .button {
+  color: white;
+  background-color: darkblue;
+  border-color: white;
+  border-width: 0.1rem;
+  font-family: monospace;
+  padding: 0 1rem; }
+
+.puyo .textElement {
+  color: white;
+  border-width: 0.1rem;
+  font-family: monospace;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 1rem;
+  max-width: 700px; }

@@ -34,8 +34,12 @@ export const PuyoSettings = (props: IProps) => {
       }}
     >
       <FlexElement orientation="COL" enforceAlign>
-        <TextElement text="Pu Yo Pu Yo" size="large" />
-        <TextElement text={"Difficulty: " + difficulty} size="medium" />
+        <TextElement text="Beans React" size="large" needsBackGround />
+        <TextElement
+          text={"Difficulty: " + difficulty}
+          size="medium"
+          needsBackGround
+        />
         <FlexElement orientation="ROW" enforceAlign>
           <Button text={"Easy"} onPress={() => setDifficulty("Easy")} />
           <Button text={"Medium"} onPress={() => setDifficulty("Medium")} />
@@ -45,7 +49,7 @@ export const PuyoSettings = (props: IProps) => {
             onPress={() => setDifficulty("Puyo Must Die!")}
           />
         </FlexElement>
-        <TextElement text={"Song: " + song} size="medium" />
+        <TextElement text={"Song: " + song} size="medium" needsBackGround />
         <FlexElement orientation="ROW" enforceAlign>
           <Button
             text={"Big In Japan"}
@@ -65,10 +69,10 @@ export const PuyoSettings = (props: IProps) => {
           <Button text={"[Mute]"} onPress={() => setSong("Mute")} />
         </FlexElement>
         <FlexElement orientation="ROW">
-          <TextElement text="A = Rotate Left" size="small" />
-          <TextElement text="S = Rotate Right" size="small" />
+          <TextElement text="A = Rotate Left" size="small" needsBackGround />
+          <TextElement text="S = Rotate Right" size="small" needsBackGround />
         </FlexElement>
-        <TextElement text="Arrow Keys = Move" size="small"></TextElement>
+        <TextElement text="Arrow Keys = Move" size="small" needsBackGround />
         <Button text={"Start !!!"} onPress={() => setScreen("game")} />
       </FlexElement>
     </div>

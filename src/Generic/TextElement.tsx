@@ -3,11 +3,13 @@ import { ReactNode } from "react";
 type IProps = {
   text?: string;
   size?: "large" | "medium" | "small";
+  needsBackGround?: boolean;
   children?: ReactNode;
+  style?: React.CSSProperties;
 };
 
 export const TextElement = (props: IProps) => {
-  const { text, size, children } = props;
+  const { text, size, children, needsBackGround, style } = props;
 
   const processSize = () => {
     switch (size) {
@@ -22,8 +24,11 @@ export const TextElement = (props: IProps) => {
     }
   };
   return (
-    <div>
-      <div className="textElement" style={{ fontSize: processSize() }}>
+    <div style={style}>
+      <div
+        className={"textElement" + (needsBackGround ? " needsBackground" : "")}
+        style={{ fontSize: processSize() }}
+      >
         <div>{text}</div>
         {children}
       </div>

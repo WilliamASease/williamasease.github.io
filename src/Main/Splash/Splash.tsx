@@ -11,7 +11,7 @@ export const Splash = (props: IProps): ReactElement => {
   const { setSplashScreen } = props;
   return (
     <FlexElement orientation={"COL"} enforceAlign>
-      <TextElement text={"Welcome."} />
+      <TextElement text={"Welcome."} needsBackGround />
       <Button onPress={() => setSplashScreen(false)} text={"continue"} />
     </FlexElement>
   );

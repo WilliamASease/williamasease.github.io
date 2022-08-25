@@ -18,7 +18,7 @@ export const ContentBody = (props: IProps) => {
         />
       )}
       {content === "skills" && (
-        <TextElement>
+        <TextElement needsBackGround>
           <p>
             <b>Well-developed communication and teamwork skills</b>
           </p>
@@ -31,7 +31,7 @@ export const ContentBody = (props: IProps) => {
         </TextElement>
       )}
       {content === "education" && (
-        <TextElement>
+        <TextElement needsBackGround>
           <p>
             <b>Appalachian State University, Boone, NC</b>
           </p>
@@ -45,7 +45,7 @@ export const ContentBody = (props: IProps) => {
         </TextElement>
       )}
       {content === "projects" && (
-        <TextElement>
+        <TextElement needsBackGround>
           <p>
             <b>Beans Java-- Sole Developer</b>
           </p>
@@ -83,7 +83,7 @@ export const ContentBody = (props: IProps) => {
         </TextElement>
       )}
       {content === "accomplishments" && (
-        <TextElement>
+        <TextElement needsBackGround>
           <p>
             <b>
               Assistant to IT Professional, RaleighITGuy
@@ -112,7 +112,7 @@ export const ContentBody = (props: IProps) => {
         </TextElement>
       )}
       {content === "workexperience" && (
-        <TextElement>
+        <TextElement needsBackGround>
           <p>
             <b>
               Epic Systems Corporation, Full Stack Software Developer, MyChart

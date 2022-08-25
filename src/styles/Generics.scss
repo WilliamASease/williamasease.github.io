@@ -1,8 +1,15 @@
-.button {
+.needsBackground {
+  border: solid black 1px;
   color: black;
   background-color: white;
+}
+
+.button {
   font-family: "Courier New", Courier, monospace;
   padding: 0 1rem;
+  border: solid black 1px;
+  color: black;
+  background-color: white;
 }
 
 .linkElement {
@@ -13,9 +20,6 @@
 }
 
 .textElement {
-  border: solid black 1px;
-  color: black;
-  background-color: white;
   font-family: "Courier New", Courier, monospace;
   padding: 0 1rem;
   margin: 0.25rem;

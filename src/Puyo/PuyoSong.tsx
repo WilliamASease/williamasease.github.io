@@ -2,10 +2,12 @@ import { songType } from "./PuyoTypes";
 
 type IProps = {
   song: songType;
+  muted: boolean;
 };
 
 export const PuyoSong = (props: IProps) => {
-  const { song } = props;
+  const { song, muted } = props;
+  if (muted) return <></>;
   return (
     <div style={{ position: "fixed", bottom: 1, right: 1 }}>
       {song === "Big In Japan" && (

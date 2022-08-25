@@ -10,7 +10,10 @@ export const Puyo = () => {
   const [song, setSong] = useState<songType>("Big In Japan");
 
   return (
-    <div style={{ width: 600, height: 700, backgroundColor: "black" }}>
+    <div
+      className="puyo"
+      style={{ width: 600, height: 700, backgroundColor: "black" }}
+    >
       {screen === "settings" && (
         <PuyoSettings
           setScreen={setScreen}

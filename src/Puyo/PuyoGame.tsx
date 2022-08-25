@@ -1,10 +1,13 @@
 import { PuyoSong } from "./PuyoSong";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { boardTypes, difficultyType, screenType, songType } from "./PuyoTypes";
 import { difficultyToNumericDifficulty } from "./PuyoUtils";
 import { TextElement } from "../Generic/TextElement";
-import { FlexElement } from "../Generic/FlexElement";
-import { Button } from "../Generic/Button";
+import { puyoStyleFactory } from "./PuyoStyleFactory";
+import { PuyoBoard } from "./PuyoBoard";
+import { PuyoScore } from "./PuyoScore";
+import { PuyoGameButtons } from "./PuyoGameButtons";
+import { PuyoMessages } from "./PuyoMessages";
 
 type IProps = {
   setScreen: React.Dispatch<React.SetStateAction<screenType>>;
@@ -19,12 +22,33 @@ export const PuyoGame = (props: IProps) => {
     difficultyToNumericDifficulty(difficulty)
   );
 
+  const [pause, setPause] = useState(false);
+  const [muted, setMuted] = useState(false);
+  const [frame, setFrame] = useState(0);
+  const [gameFrame, setGameFrame] = useState(0);
+  const [prevFrame, setPrevFrame] = useState(Date.now());
+  const [fps, setFPS] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
-      setNumericDifficulty(numericDifficulty + 0.01);
-    }, 17);
+      setFrame(frame + 1);
+      setGameFrame(gameFrame + (pause ? 0 : 1));
+      const snapShot = Date.now();
+      setFPS(Math.round(1000 / (snapShot - prevFrame)));
+      setPrevFrame(snapShot);
+    }, 8);
     return () => clearInterval(interval);
   });
+
+  const [messages, setMessages] = useState<string[]>([]);
+  const [messageTimeStamp, setMessageTimeStamps] = useState<number[]>([]);
+  const fireMessage = useCallback((message: string, frame: number) => {
+    const newMessages = messages;
+    const newTimeStamps = messageTimeStamp;
+    newMessages.unshift(message);
+    newTimeStamps.unshift(frame);
+    setMessages([...newMessages.slice(0, 4)]);
+    setMessageTimeStamps([...newTimeStamps.slice(0, 4)]);
+  }, []);
 
   return (
     <div
@@ -37,64 +61,41 @@ export const PuyoGame = (props: IProps) => {
         position: "static",
       }}
     >
-      <div style={{ height: 200 }}>
-        <FlexElement orientation="ROW">
-          <Button text="Quit (Q)" onPress={() => setScreen("settings")} />
-          <Button text="Pause (P)" onPress={() => {}} />
-          <TextElement text="Puyo Puyo" size="medium" />
-        </FlexElement>
+      <PuyoSong song={song} muted={muted} />
+      <div style={{ height: 200, position: "absolute" }}>
+        <PuyoGameButtons
+          setScreen={setScreen}
+          setPause={setPause}
+          setMuted={setMuted}
+          fireMessage={fireMessage}
+          pause={pause}
+          muted={muted}
+          fps={fps}
+          frame={frame}
+        />
       </div>
-      <PuyoSong song={song} />
-      <div
-        style={{
-          width: 300,
-          height: 500,
-          position: "absolute",
-          bottom: 125,
-          border: "solid black 1px",
-          backgroundColor: "white",
-        }}
-      >
-        <TextElement text="This is the game board." />
+      <div style={puyoStyleFactory("gameBoard")}>
+        <PuyoBoard />
       </div>
-      <div
-        style={{
-          width: 250,
-          height: 300,
-          position: "relative",
-          top: 25,
-          float: "right",
-          border: "solid black 1px",
-          backgroundColor: "white",
-        }}
-      >
-        <TextElement text="Score information Appears Here." />
+      <div className="puyoBoardScoreInfo" style={puyoStyleFactory("scoreInfo")}>
+        <PuyoScore
+          frames={gameFrame}
+          score={0}
+          difficulty={numericDifficulty}
+        />
       </div>
-      <div
-        style={{
-          width: 250,
-          height: 100,
-          position: "relative",
-          bottom: 100,
-          left: 250,
-          float: "right",
-          border: "solid black 1px",
-          backgroundColor: "white",
-        }}
-      >
+      <div className="puyoBoardNextPuyo" style={puyoStyleFactory("nextPuyo")}>
         <TextElement text="Next Puyo Appears Here." />
       </div>
-      <div
-        style={{
-          width: 570,
-          height: 100,
-          position: "absolute",
-          bottom: 10,
-          border: "solid black 1px",
-          backgroundColor: "white",
-        }}
-      >
-        <TextElement text="Game Messages Appear Here." />
+      <div style={puyoStyleFactory("dancingMonkey")}>
+        <TextElement text="Dancing Monkey!?." />
+      </div>
+      <div style={puyoStyleFactory("gameMessages")}>
+        <PuyoMessages
+          messages={messages}
+          messageTimeStamp={messageTimeStamp}
+          frame={frame}
+        />
       </div>
     </div>
   );
