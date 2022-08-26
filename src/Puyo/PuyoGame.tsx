@@ -1,6 +1,12 @@
 import { PuyoSong } from "./PuyoSong";
 import { useCallback, useEffect, useState } from "react";
-import { boardTypes, difficultyType, screenType, songType } from "./PuyoTypes";
+import {
+  boardTypes,
+  difficultyType,
+  keyStatus,
+  screenType,
+  songType,
+} from "./PuyoTypes";
 import { difficultyToNumericDifficulty } from "./PuyoUtils";
 import { TextElement } from "../Generic/TextElement";
 import { puyoStyleFactory } from "./PuyoStyleFactory";
@@ -8,6 +14,7 @@ import { PuyoBoard } from "./PuyoBoard";
 import { PuyoScore } from "./PuyoScore";
 import { PuyoGameButtons } from "./PuyoGameButtons";
 import { PuyoMessages } from "./PuyoMessages";
+import { PuyoKeys } from "./PuyoKeys";
 
 type IProps = {
   setScreen: React.Dispatch<React.SetStateAction<screenType>>;
@@ -21,6 +28,32 @@ export const PuyoGame = (props: IProps) => {
   const [numericDifficulty, setNumericDifficulty] = useState<number>(
     difficultyToNumericDifficulty(difficulty)
   );
+
+  const [keys, setKeys] = useState<keyStatus>({
+    a: false,
+    s: false,
+    leftArrow: false,
+    rightArrow: false,
+    upArrow: false,
+    downArrow: false,
+    q: false,
+    m: false,
+    p: false,
+  });
+  useEffect(() => {
+    window.addEventListener("keypress", (e) => {
+      if (e.key === "q") {
+      }
+      if (e.key === "m") {
+        fireMessage(!muted ? "Muted" : "Unmuted", frame);
+        setMuted(!muted);
+      }
+      if (e.key === "p") {
+        fireMessage(!pause ? "Paused" : "Unpaused", frame);
+        setPause(!pause);
+      }
+    });
+  }, []);
 
   const [pause, setPause] = useState(false);
   const [muted, setMuted] = useState(false);
@@ -61,6 +94,7 @@ export const PuyoGame = (props: IProps) => {
         position: "static",
       }}
     >
+      <PuyoKeys keys={keys} setKeys={setKeys} />
       <PuyoSong song={song} muted={muted} />
       <div style={{ height: 200, position: "absolute" }}>
         <PuyoGameButtons
@@ -85,7 +119,7 @@ export const PuyoGame = (props: IProps) => {
         />
       </div>
       <div className="puyoBoardNextPuyo" style={puyoStyleFactory("nextPuyo")}>
-        <TextElement text="Next Puyo Appears Here." />
+        <TextElement text={keys.a + ""} />
       </div>
       <div style={puyoStyleFactory("dancingMonkey")}>
         <TextElement text="Dancing Monkey!?." />
