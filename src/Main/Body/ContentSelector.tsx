@@ -47,12 +47,6 @@ export const ContentSelector = (props: IProps) => {
             setContent("workexperience");
           }}
         />
-        <Button
-          text={"ぷよぷよ"}
-          onPress={() => {
-            setContent("puyo");
-          }}
-        />
       </FlexElement>
     </FlexElement>
   );
