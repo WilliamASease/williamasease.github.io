@@ -64,12 +64,10 @@ export type contentObject = {
                 ]
             },
             {
-                sup: "Professionalism & Interpersonal Communication",
+                sup: "I'm from around here",
                 sub:
                 [
                     "Leesville Road High School, Raleigh, NC",
-                    "1380 SAT/30 ACT",
-                    "Graduating GPA: 3.9"
                 ]
             }
         ]
@@ -161,7 +159,7 @@ export type contentObject = {
 
  const workExperience : contentObject = 
 {
-    title:"Work Experience", 
+    title:'You could say I have "industry cred"', 
     body:
         [
             {
