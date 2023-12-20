@@ -10,6 +10,8 @@ export const SiteText = (props: {
   </div>
 );
 
+export const SiteSpacer = () => <div style={{ height: "1rem" }}></div>;
+
 type FlexBoxProps = {
   orientation: "row" | "column";
   fullHeight?: boolean;
@@ -65,12 +67,24 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   );
 };
 
-export const InlineImage = (props: { name: string; altText: string }) => (
+export const InlineImage = (props: {
+  relPath: string;
+  altText: string;
+  style?: React.CSSProperties;
+}) => (
   <img
-    src={`https://williamasease.github.io/build/images/${props.name}`}
+    src={`https://williamasease.github.io/build/images/${props.relPath}`}
     alt={props.altText}
-    style={{ marginTop: 5 }}
+    style={{ marginTop: 5, maxWidth: "50%", ...props.style }}
   />
+);
+
+export const InlineDownload = (props: { relPath: string; text: string }) => (
+  <Anchor
+    link={`https://williamasease.github.io/build/downloads/${props.relPath}`}
+  >
+    {props.text}
+  </Anchor>
 );
 
 export const Anchor = (props: { children: ReactNode; link: string }) => {
