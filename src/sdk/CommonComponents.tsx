@@ -1,5 +1,15 @@
 import { ReactNode, useState } from "react";
 
+export const SiteText = (props: {
+  value: string;
+  bold?: boolean;
+  style?: React.CSSProperties;
+}) => (
+  <div style={{ fontWeight: props.bold ? "bold" : "unset", ...props.style }}>
+    {props.value}
+  </div>
+);
+
 type FlexBoxProps = {
   orientation: "row" | "column";
   fullHeight?: boolean;
@@ -22,7 +32,9 @@ export const FlexBox = (props: FlexBoxProps) => (
   </div>
 );
 
-export const WindowShade = (props: { children: ReactNode; title: string }) => {
+export const WindowShade = (props: { children?: ReactNode; title: string }) => {
+  const { children = "Empty Windowshade. This is probably a mistake.", title } =
+    props;
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -45,15 +57,21 @@ export const WindowShade = (props: { children: ReactNode; title: string }) => {
           </div>
         </div>
         <div style={{ marginLeft: 5 }}>
-          <div style={{ fontWeight: "bold", marginBottom: 5 }}>
-            {props.title}
-          </div>
-          {isOpen && props.children}
+          <div style={{ fontWeight: "bold", marginBottom: 10 }}>{title}</div>
+          {isOpen && children}
         </div>
       </FlexBox>
     </FlexBox>
   );
 };
+
+export const InlineImage = (props: { name: string; altText: string }) => (
+  <img
+    src={`https://williamasease.github.io/build/images/${props.name}`}
+    alt={props.altText}
+    style={{ marginTop: 5 }}
+  />
+);
 
 export const Anchor = (props: { children: ReactNode; link: string }) => {
   const { children, link } = props;
