@@ -1,17 +1,23 @@
 import "./App.css";
-import { FlexBox } from "./sdk/CommonComponents";
+import { FlexBox, WindowShade } from "./sdk/CommonComponents";
+import { isMobile } from "react-device-detect";
 
 function App() {
   return (
     <FlexBox
       orientation="column"
-      style={{ backgroundColor: "red", alignItems: "center" }}
+      style={{ backgroundColor: "lightgrey", alignItems: "center" }}
+      fullHeight
+      fullWidth
     >
       <FlexBox
         orientation="column"
-        style={{ width: 1000, backgroundColor: "blue" }}
+        style={{ width: isMobile ? "100%" : 1000, backgroundColor: "white" }}
+        fullHeight
       >
-        <div>hello</div>
+        <WindowShade title="Hello">
+          <div>Goodbye</div>
+        </WindowShade>
       </FlexBox>
     </FlexBox>
   );
