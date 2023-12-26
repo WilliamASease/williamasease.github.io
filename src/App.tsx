@@ -27,6 +27,8 @@ function App() {
           width: isMobile ? "100%" : 1000,
           flexGrow: 1,
           backgroundColor: "white",
+          marginLeft: isMobile ? 5 : undefined,
+          marginRight: isMobile ? 5 : undefined,
           paddingLeft: 5,
           paddingRight: 5,
         }}

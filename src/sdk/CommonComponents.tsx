@@ -1,4 +1,11 @@
-import { ReactNode, useState } from "react";
+import {
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 export const SiteText = (props: {
   value: string;
@@ -38,9 +45,23 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   const { children = "Empty Windowshade. This is probably a mistake.", title } =
     props;
   const [isOpen, setIsOpen] = useState(false);
+  const [openPercentage, setOpenPercentage] = useState(0);
+
+  useEffect(() => {
+    const fire = async () => {
+      let val =
+        isOpen && openPercentage < 100
+          ? 1
+          : !isOpen && openPercentage > 0
+          ? -1
+          : 0;
+      setTimeout(() => setOpenPercentage((prev) => prev + val), 4);
+    };
+    fire();
+  }, [isOpen, openPercentage, setOpenPercentage]);
 
   return (
-    <FlexBox orientation="column" style={{ marginTop: 5 }}>
+    <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
       <FlexBox orientation="row">
         <div style={{}} onClick={() => setIsOpen(!isOpen)}>
           <div
@@ -59,8 +80,17 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
           </div>
         </div>
         <div style={{ marginLeft: 5 }}>
-          <div style={{ fontWeight: "bold", marginBottom: 10 }}>{title}</div>
-          {isOpen && children}
+          <div style={{ fontWeight: "bold", paddingBottom: 5 }}>{title}</div>
+          <div style={{ height: "100%" }}>
+            <div
+              style={{
+                height: `${openPercentage}%`,
+                overflowY: "hidden",
+              }}
+            >
+              {openPercentage > 0 && children}
+            </div>
+          </div>
         </div>
       </FlexBox>
     </FlexBox>
