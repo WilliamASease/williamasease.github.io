@@ -25,7 +25,7 @@ function App() {
         orientation="column"
         style={{
           width: isMobile ? "100%" : 1000,
-          minHeight: "100%",
+          flexGrow: 1,
           backgroundColor: "white",
           paddingLeft: 5,
           paddingRight: 5,
