@@ -77,7 +77,7 @@ function App() {
             bold
             value="Professionalism & Interpersonal Communication"
           />
-          <SiteText value="Enjoys collaboration and working in teams" />
+          <SiteText value="Enjoys collaboration" />
           <SiteText value="Works well with developers, project management, and quality assurance" />
         </WindowShade>
         <WindowShade title="Projects">
