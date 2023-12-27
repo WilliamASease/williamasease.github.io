@@ -88,10 +88,8 @@ function App() {
                 altText="Spotify 95 Screenshot"
                 relPath="Spotify95Screenshot.png"
               />
-              <InlineDownload
-                relPath="Spotify95/0.0.1.rar"
-                text="0.0.1 (Windows only for now)"
-              />
+              <SiteText bold underline value="Windows:" />
+              <InlineDownload relPath="Spotify95/0.0.1.rar" text="0.0.1" />
             </WindowShade>
           </WindowShade>
           <WindowShade title="Past">

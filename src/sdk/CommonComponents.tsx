@@ -1,18 +1,16 @@
-import {
-  ReactNode,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 export const SiteText = (props: {
   value: string;
   bold?: boolean;
-  style?: React.CSSProperties;
+  underline?: boolean;
 }) => (
-  <div style={{ fontWeight: props.bold ? "bold" : "unset", ...props.style }}>
+  <div
+    style={{
+      fontWeight: props.bold ? "bold" : "unset",
+      textDecoration: props.underline ? "underline" : undefined,
+    }}
+  >
     {props.value}
   </div>
 );
@@ -63,7 +61,7 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   return (
     <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
       <FlexBox orientation="row">
-        <div style={{}} onClick={() => setIsOpen(!isOpen)}>
+        <div onClick={() => setIsOpen(!isOpen)}>
           <div
             style={{
               border: "solid black 1px",
@@ -72,6 +70,7 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
             }}
           >
             <img
+              alt={isOpen ? "collapse" : "expand"}
               style={{ width: 20, height: 20 }}
               src={`https://williamasease.github.io/build/images/${
                 isOpen ? `minus` : `plus`
@@ -119,7 +118,7 @@ export const Anchor = (props: { children: ReactNode; link: string }) => {
   const { children, link } = props;
   return (
     <div>
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noreferrer">
         <div>{children}</div>
       </a>
     </div>
