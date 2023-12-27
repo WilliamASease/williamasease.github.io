@@ -61,13 +61,14 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   return (
     <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
       <FlexBox orientation="row">
-        <div onClick={() => setIsOpen(!isOpen)}>
+        <div>
           <div
             style={{
               border: "solid black 1px",
               width: 20,
               height: 20,
             }}
+            onClick={() => setIsOpen(!isOpen)}
           >
             <img
               alt={isOpen ? "collapse" : "expand"}
