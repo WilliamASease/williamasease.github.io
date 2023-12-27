@@ -66,7 +66,7 @@ function App() {
         <WindowShade title="Education">
           <SiteText bold value="Appalachian State University, Boone, NC" />
           <SiteText value="Bachelor of Science in Computer Science, May 2021" />
-          <SiteText value="GPA: 3.75" />
+          <SiteText value="Magna Cum Laude" />
         </WindowShade>
         <WindowShade title="Skills">
           <SiteText bold value="Craft" />
