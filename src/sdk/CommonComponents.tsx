@@ -79,17 +79,15 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
             />
           </div>
         </div>
-        <div style={{ marginLeft: 5 }}>
+        <div style={{ marginLeft: 5, position: "relative" }}>
           <div style={{ fontWeight: "bold", paddingBottom: 5 }}>{title}</div>
-          <div style={{ height: "100%" }}>
-            <div
-              style={{
-                height: `${openPercentage}%`,
-                overflowY: "hidden",
-              }}
-            >
-              {openPercentage > 0 && children}
-            </div>
+          <div
+            style={{
+              height: `${openPercentage}%`,
+              overflowY: "hidden",
+            }}
+          >
+            {openPercentage > 0 && children}
           </div>
         </div>
       </FlexBox>
