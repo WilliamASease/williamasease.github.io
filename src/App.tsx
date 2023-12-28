@@ -1,5 +1,5 @@
 import "./App.css";
-import { useBlogPosts } from "./BlogContent";
+import { useBlogPosts } from "./data/BlogContent";
 import {
   Anchor,
   FlexBox,
@@ -8,16 +8,17 @@ import {
   SiteSpacer,
   SiteText,
   WindowShade,
-  ImagePreloader,
 } from "./sdk/CommonComponents";
 import { isMobile } from "react-device-detect";
 import { ContactForm } from "./forms/Contactform";
 import { BlogPostComponent } from "./components/BlogPostComponent";
+import { ImagePreloader, useImageDefinitions } from "./data/ImageDefinitions";
 
 const debug = false;
 
 function App() {
   const blogPosts = useBlogPosts(debug);
+  const { imageDefinitions, relPathsForPreload } = useImageDefinitions();
 
   return (
     <FlexBox
@@ -41,7 +42,7 @@ function App() {
           paddingRight: 5,
         }}
       >
-        <ImagePreloader images={["was.png", "Spotify95Screenshot.png"]} />
+        <ImagePreloader images={relPathsForPreload} />
         <SiteText bold value="William A. Sease's Personal Site" />
         <WindowShade title="The Important Links">
           <Anchor link="https://www.linkedin.com/in/william-sease-907bb219a?trk=people-guest_people_search-card">
@@ -54,11 +55,7 @@ function App() {
           </Anchor>
         </WindowShade>
         <WindowShade title="File Photo">
-          <InlineImage
-            altText="William A. Sease"
-            relPath="was.png"
-            style={{ borderRadius: 10 }}
-          />
+          <InlineImage style={{ borderRadius: 10 }} {...imageDefinitions.was} />
         </WindowShade>
         <WindowShade title="Work History">
           <WindowShade title="Epic Systems Corporation">
@@ -93,10 +90,7 @@ function App() {
           <WindowShade title="Present">
             <WindowShade title="Spotify95">
               <SiteText value="A custom react frontend for Spotify." />
-              <InlineImage
-                altText="Spotify 95 Screenshot"
-                relPath="Spotify95Screenshot.png"
-              />
+              <InlineImage {...imageDefinitions.spotify95Screenshot} />
               <SiteText bold underline value="Windows:" />
               <InlineDownload relPath="Spotify95/0.0.1.rar" text="0.0.1" />
             </WindowShade>

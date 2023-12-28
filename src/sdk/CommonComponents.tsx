@@ -3,8 +3,10 @@ import {
   ReactNode,
   useCallback,
   useEffect,
+  useMemo,
   useState,
 } from "react";
+import { useImageDefinitions } from "../data/ImageDefinitions";
 
 export const SiteText = (props: {
   value: string;
@@ -53,7 +55,12 @@ export const FlexBox = (props: FlexBoxProps) => (
 export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   const { children = "Empty Windowshade. This is probably a mistake.", title } =
     props;
+  const { imageDefinitions } = useImageDefinitions();
   const [isOpen, setIsOpen] = useState(false);
+  const controlImage = useMemo(
+    () => (isOpen ? imageDefinitions.minus : imageDefinitions.plus),
+    [isOpen]
+  );
   const [openPercentage, setOpenPercentage] = useState(0);
 
   const fire = useCallback(() => {
@@ -81,11 +88,9 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
             onClick={() => setIsOpen(!isOpen)}
           >
             <img
-              alt={isOpen ? "collapse" : "expand"}
+              alt={controlImage.altText}
               style={{ width: 20, height: 20 }}
-              src={`https://williamasease.github.io/build/images/${
-                isOpen ? `minus` : `plus`
-              }.png`}
+              src={`https://williamasease.github.io/build/images/${controlImage.relPath}`}
             />
           </div>
         </div>
@@ -115,14 +120,6 @@ export const InlineImage = (props: {
     alt={props.altText}
     style={{ marginTop: 5, maxWidth: "50%", ...props.style }}
   />
-);
-
-export const ImagePreloader = (props: { images: string[] }) => (
-  <div style={{ display: "none" }}>
-    {props.images.map((s) => (
-      <InlineImage altText="none" relPath={s} />
-    ))}
-  </div>
 );
 
 export const InlineDownload = (props: { relPath: string; text: string }) => (

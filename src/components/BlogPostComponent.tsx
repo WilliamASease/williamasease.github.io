@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { BlogPost } from "../BlogContent";
+import { BlogPost } from "../data/BlogContent";
 import { SiteSpacer, SiteText } from "../sdk/CommonComponents";
 
 export const BlogPostComponent = (props: { blogPost: BlogPost }) => {
@@ -12,7 +12,7 @@ export const BlogPostComponent = (props: { blogPost: BlogPost }) => {
       blogPost.paragraphs.map((p) => p.length).reduce((a, b) => a + b, 0)
     )
       setTimeout(() => setShownChars((prev) => prev + 1), 1);
-  }, [shownChars]);
+  }, [shownChars, blogPost.paragraphs]);
 
   const buffers = useMemo(
     () =>
