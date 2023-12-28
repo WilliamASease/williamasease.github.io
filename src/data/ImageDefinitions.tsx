@@ -15,11 +15,10 @@ export const useImageDefinitions = () => {
       altText: "Spotify 95",
     },
     was: { relPath: "was.png", altText: "William A. Sease" },
-    plus: {
-      relPath: "plus.png",
+    arrow: {
+      relPath: "arrow.png",
       altText: "Expand",
     },
-    minus: { relPath: "minus.png", altText: "Collapse" },
   };
   return {
     imageDefinitions: imageDefinitions,

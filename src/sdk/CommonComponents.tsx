@@ -57,10 +57,7 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
     props;
   const { imageDefinitions } = useImageDefinitions();
   const [isOpen, setIsOpen] = useState(false);
-  const controlImage = useMemo(
-    () => (isOpen ? imageDefinitions.minus : imageDefinitions.plus),
-    [isOpen]
-  );
+
   const [openPercentage, setOpenPercentage] = useState(0);
 
   const fire = useCallback(() => {
@@ -88,9 +85,13 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
             onClick={() => setIsOpen(!isOpen)}
           >
             <img
-              alt={controlImage.altText}
-              style={{ width: 20, height: 20 }}
-              src={`https://williamasease.github.io/build/images/${controlImage.relPath}`}
+              alt={imageDefinitions.arrow.relPath}
+              style={{
+                width: 20,
+                height: 20,
+                rotate: `${(openPercentage / 100) * 90}deg`,
+              }}
+              src={`https://williamasease.github.io/build/images/${imageDefinitions.arrow.relPath}`}
             />
           </div>
         </div>
