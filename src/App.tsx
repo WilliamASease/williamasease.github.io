@@ -96,12 +96,14 @@ function App() {
             </WindowShade>
           </WindowShade>
           <WindowShade title="Past">
-            <SiteText value="It's all in the github. I'll jot it all down here later." />
+            <SiteText value="It's all in the github. I'll jot it down here later." />
           </WindowShade>
         </WindowShade>
         <WindowShade title="The Update">
           {blogPosts.map((bp) => (
-            <WindowShade title={bp.date + " - " + bp.title}>
+            <WindowShade
+              title={`${bp.month}. ${bp.day}, ${bp.year} - ${bp.title}`}
+            >
               <BlogPostComponent blogPost={bp} />
             </WindowShade>
           ))}

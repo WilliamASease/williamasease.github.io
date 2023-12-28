@@ -1,12 +1,16 @@
 export type BlogPost = {
-  date: string;
+  year: number;
+  month: string;
+  day: number;
   title: string;
   paragraphs: string[];
 };
 
 // eslint-disable-next-line
 const AnimationTest: BlogPost = {
-  date: "00/00/0000",
+  year: 0,
+  month: "Jan",
+  day: 0,
   title: "Animation Test",
   paragraphs: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et dui eu libero pharetra pellentesque et egestas massa. Aenean consequat finibus enim, at ultrices diam vulputate at. Integer porttitor porttitor leo, at euismod arcu euismod eu. Maecenas facilisis purus maximus, pharetra lorem sed, fermentum ligula. Duis luctus lectus non sem volutpat fermentum. Curabitur condimentum vestibulum lectus ac pulvinar. Quisque aliquet aliquam tellus, ut accumsan metus porta auctor. Sed blandit nisi bibendum ligula maximus, in pulvinar dolor euismod. Etiam gravida orci justo, vel laoreet nisl suscipit vel. Mauris bibendum diam a magna venenatis, sit amet varius tortor scelerisque. Cras ac cursus tortor, euismod imperdiet nibh. Sed pellentesque dui in tempor dictum. Nunc iaculis egestas est nec consectetur.",
@@ -18,7 +22,9 @@ const AnimationTest: BlogPost = {
 };
 
 const Welcome: BlogPost = {
-  date: "12/28/23",
+  year: 2023,
+  month: "Dec",
+  day: 28,
   title: "Welcome",
   paragraphs: [
     "Welcome to WilliamASease.github.io 3.0! Please stay tuned for anything I'm set to reveal here.",
