@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useCallback, useEffect, useState } from "react";
 
 export const SiteText = (props: {
   value: string;
@@ -45,18 +45,17 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [openPercentage, setOpenPercentage] = useState(0);
 
-  useEffect(() => {
-    const fire = async () => {
-      let val =
-        isOpen && openPercentage < 100
-          ? 1
-          : !isOpen && openPercentage > 0
-          ? -1
-          : 0;
-      setTimeout(() => setOpenPercentage((prev) => prev + val), 4);
-    };
-    fire();
+  const fire = useCallback(() => {
+    let val =
+      isOpen && openPercentage < 100
+        ? 1
+        : !isOpen && openPercentage > 0
+        ? -1
+        : 0;
+    setTimeout(() => setOpenPercentage((prev) => prev + val), 4);
   }, [isOpen, openPercentage, setOpenPercentage]);
+
+  useEffect(fire, [fire]);
 
   return (
     <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
