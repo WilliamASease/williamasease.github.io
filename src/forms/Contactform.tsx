@@ -7,7 +7,7 @@ export const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="email">
-        <SiteText value="Your email:" />
+        <SiteText value="Email:" />
       </label>
       <input
         placeholder="something@somewhere.[com|etc]"
@@ -19,9 +19,13 @@ export const ContactForm = () => {
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <div>
         <label htmlFor="message">
-          <SiteText value="Your Message:" />
+          <SiteText value="Message:" />
         </label>
-        <textarea id="message" name="message" style={{ width: "50%" }} />
+        <textarea
+          id="message"
+          name="message"
+          style={{ width: "50%", height: "5rem" }}
+        />
       </div>
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       {state.succeeded && <SiteText value="Received." />}

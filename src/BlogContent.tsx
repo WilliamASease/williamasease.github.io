@@ -4,6 +4,7 @@ export type BlogPost = {
   paragraphs: string[];
 };
 
+// eslint-disable-next-line
 const AnimationTest: BlogPost = {
   date: "00/00/0000",
   title: "Animation Test",
@@ -24,4 +25,6 @@ const Welcome: BlogPost = {
   ],
 };
 
-export const BlogPosts: BlogPost[] = [Welcome];
+export const useBlogPosts: (debug?: boolean) => BlogPost[] = (
+  debug?: boolean
+) => [...(debug ? [AnimationTest] : []), Welcome];

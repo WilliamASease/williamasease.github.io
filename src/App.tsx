@@ -1,6 +1,5 @@
-import { ValidationError, useForm } from "@formspree/react";
 import "./App.css";
-import { BlogPosts } from "./BlogContent";
+import { useBlogPosts } from "./BlogContent";
 import {
   Anchor,
   FlexBox,
@@ -9,12 +8,17 @@ import {
   SiteSpacer,
   SiteText,
   WindowShade,
+  ImagePreloader,
 } from "./sdk/CommonComponents";
 import { isMobile } from "react-device-detect";
 import { ContactForm } from "./forms/Contactform";
 import { BlogPostComponent } from "./components/BlogPostComponent";
 
+const debug = false;
+
 function App() {
+  const blogPosts = useBlogPosts(debug);
+
   return (
     <FlexBox
       orientation="column"
@@ -37,6 +41,7 @@ function App() {
           paddingRight: 5,
         }}
       >
+        <ImagePreloader images={["was.png", "Spotify95Screenshot.png"]} />
         <SiteText bold value="William A. Sease's Personal Site" />
         <WindowShade title="The Important Links">
           <Anchor link="https://www.linkedin.com/in/william-sease-907bb219a?trk=people-guest_people_search-card">
@@ -101,7 +106,7 @@ function App() {
           </WindowShade>
         </WindowShade>
         <WindowShade title="The Update">
-          {BlogPosts.map((bp) => (
+          {blogPosts.map((bp) => (
             <WindowShade title={bp.date + " - " + bp.title}>
               <BlogPostComponent blogPost={bp} />
             </WindowShade>

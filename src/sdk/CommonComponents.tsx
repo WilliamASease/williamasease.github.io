@@ -117,6 +117,14 @@ export const InlineImage = (props: {
   />
 );
 
+export const ImagePreloader = (props: { images: string[] }) => (
+  <div style={{ display: "none" }}>
+    {props.images.map((s) => (
+      <InlineImage altText="none" relPath={s} />
+    ))}
+  </div>
+);
+
 export const InlineDownload = (props: { relPath: string; text: string }) => (
   <Anchor
     link={`https://williamasease.github.io/build/downloads/${props.relPath}`}
