@@ -1,11 +1,4 @@
-import {
-  CSSProperties,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { CSSProperties, ReactNode, useEffect, useState } from "react";
 import { useImageDefinitions } from "../data/ImageDefinitions";
 
 export const SiteText = (props: {
@@ -59,9 +52,8 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [openPercentage, setOpenPercentage] = useState(0);
-  console.info(openPercentage);
 
-  const fire = useCallback(() => {
+  useEffect(() => {
     const multipler = Math.sin((openPercentage * Math.PI) / 100) + 1;
     let val =
       isOpen && openPercentage < 100
@@ -71,8 +63,6 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
         : 0;
     setTimeout(() => setOpenPercentage((prev) => prev + val * multipler), 4);
   }, [isOpen, openPercentage, setOpenPercentage]);
-
-  useEffect(fire, [fire]);
 
   return (
     <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
