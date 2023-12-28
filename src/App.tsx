@@ -1,4 +1,6 @@
+import { ValidationError, useForm } from "@formspree/react";
 import "./App.css";
+import { BlogPosts } from "./BlogContent";
 import {
   Anchor,
   FlexBox,
@@ -9,6 +11,8 @@ import {
   WindowShade,
 } from "./sdk/CommonComponents";
 import { isMobile } from "react-device-detect";
+import { ContactForm } from "./forms/Contactform";
+import { BlogPostComponent } from "./components/BlogPostComponent";
 
 function App() {
   return (
@@ -95,6 +99,16 @@ function App() {
           <WindowShade title="Past">
             <SiteText value="It's all in the github. I'll jot it all down here later." />
           </WindowShade>
+        </WindowShade>
+        <WindowShade title="The Update">
+          {BlogPosts.map((bp) => (
+            <WindowShade title={bp.date + " - " + bp.title}>
+              <BlogPostComponent blogPost={bp} />
+            </WindowShade>
+          ))}
+        </WindowShade>
+        <WindowShade title="Contact">
+          <ContactForm />
         </WindowShade>
       </FlexBox>
     </FlexBox>

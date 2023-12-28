@@ -1,14 +1,25 @@
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import {
+  CSSProperties,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 
 export const SiteText = (props: {
   value: string;
   bold?: boolean;
   underline?: boolean;
+  indent?: boolean;
+  labelFor?: string;
+  style?: CSSProperties;
 }) => (
   <div
     style={{
       fontWeight: props.bold ? "bold" : "unset",
       textDecoration: props.underline ? "underline" : undefined,
+      textIndent: props.indent ? 50 : 0,
+      ...props.style,
     }}
   >
     {props.value}
@@ -59,7 +70,7 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
 
   return (
     <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
-      <FlexBox orientation="row">
+      <FlexBox orientation="row" style={{ width: "100%" }}>
         <div>
           <div
             style={{
@@ -78,7 +89,7 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
             />
           </div>
         </div>
-        <div style={{ marginLeft: 5, position: "relative" }}>
+        <div style={{ marginLeft: 5, position: "relative", flexGrow: 1 }}>
           <div style={{ fontWeight: "bold", paddingBottom: 5 }}>{title}</div>
           <div
             style={{
