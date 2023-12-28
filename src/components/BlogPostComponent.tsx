@@ -25,9 +25,6 @@ export const BlogPostComponent = (props: { blogPost: BlogPost }) => {
     [blogPost.paragraphs]
   );
 
-  console.info(buffers);
-  console.info(shownChars);
-
   return (
     <div>
       {blogPost.paragraphs.map((v, i) => (
@@ -40,7 +37,7 @@ export const BlogPostComponent = (props: { blogPost: BlogPost }) => {
               shownChars - buffers[i] > 0 ? shownChars - buffers[i] : 0
             )}
           />
-          <SiteSpacer />
+          {shownChars > (buffers[i + 1] ?? Infinity) && <SiteSpacer />}
         </>
       ))}
     </div>
