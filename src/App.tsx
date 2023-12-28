@@ -100,8 +100,9 @@ function App() {
           </WindowShade>
         </WindowShade>
         <WindowShade title="The Update">
-          {blogPosts.map((bp) => (
+          {blogPosts.map((bp, i) => (
             <WindowShade
+              key={i}
               title={`${bp.month}. ${bp.day}, ${bp.year} - ${bp.title}`}
             >
               <BlogPostComponent blogPost={bp} />

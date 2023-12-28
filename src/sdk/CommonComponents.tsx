@@ -59,15 +59,17 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [openPercentage, setOpenPercentage] = useState(0);
+  console.info(openPercentage);
 
   const fire = useCallback(() => {
+    const multipler = Math.sin((openPercentage * Math.PI) / 100) + 1;
     let val =
       isOpen && openPercentage < 100
         ? 1
         : !isOpen && openPercentage > 0
         ? -1
         : 0;
-    setTimeout(() => setOpenPercentage((prev) => prev + val), 4);
+    setTimeout(() => setOpenPercentage((prev) => prev + val * multipler), 4);
   }, [isOpen, openPercentage, setOpenPercentage]);
 
   useEffect(fire, [fire]);
@@ -76,24 +78,16 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
     <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
       <FlexBox orientation="row" style={{ width: "100%" }}>
         <div>
-          <div
+          <img
+            onClick={() => setIsOpen(!isOpen)}
+            alt={imageDefinitions.arrow.relPath}
             style={{
-              border: "solid black 1px",
               width: 20,
               height: 20,
+              rotate: `${(openPercentage / 100) * 90}deg`,
             }}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <img
-              alt={imageDefinitions.arrow.relPath}
-              style={{
-                width: 20,
-                height: 20,
-                rotate: `${(openPercentage / 100) * 90}deg`,
-              }}
-              src={`https://williamasease.github.io/build/images/${imageDefinitions.arrow.relPath}`}
-            />
-          </div>
+            src={`https://williamasease.github.io/build/images/${imageDefinitions.arrow.relPath}`}
+          />
         </div>
         <div style={{ marginLeft: 5, position: "relative", flexGrow: 1 }}>
           <div style={{ fontWeight: "bold", paddingBottom: 5 }}>{title}</div>

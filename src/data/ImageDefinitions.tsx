@@ -2,8 +2,8 @@ import { InlineImage } from "../sdk/CommonComponents";
 
 export const ImagePreloader = (props: { images: string[] }) => (
   <div style={{ display: "none" }}>
-    {props.images.map((s) => (
-      <InlineImage altText="none" relPath={s} />
+    {props.images.map((s, i) => (
+      <InlineImage key={i} altText="none" relPath={s} />
     ))}
   </div>
 );
