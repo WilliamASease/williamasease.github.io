@@ -107,10 +107,8 @@ export const InlineImage = (props: {
   />
 );
 
-export const InlineDownload = (props: { relPath: string; text: string }) => (
-  <Anchor
-    link={`https://williamasease.github.io/build/downloads/${props.relPath}`}
-  >
+export const InlineLink = (props: { relPath: string; text: string }) => (
+  <Anchor link={`https://williamasease.github.io/build/${props.relPath}`}>
     {props.text}
   </Anchor>
 );
