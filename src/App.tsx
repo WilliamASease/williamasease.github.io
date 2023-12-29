@@ -93,12 +93,8 @@ function App() {
               <InlineImage {...imageDefinitions.spotify95Screenshot} />
               <WindowShade title="0.0.1">
                 <InlineLink
-                  relPath="projects/Spotify95/0.0.1/0.0.1.rar"
+                  relPath="projects/Spotify95/0.0.1/Win_0.0.1.rar"
                   text="Win"
-                />
-                <InlineLink
-                  relPath="projects/Spotify95/0.0.1/web/index.html"
-                  text="Web"
                 />
               </WindowShade>
             </WindowShade>
