@@ -91,8 +91,9 @@ function App() {
             <WindowShade title="Spotify95">
               <SiteText value="A custom react frontend for Spotify." />
               <InlineImage {...imageDefinitions.spotify95Screenshot} />
-              <SiteText bold underline value="Windows:" />
-              <InlineDownload relPath="Spotify95/0.0.1.rar" text="0.0.1" />
+              <WindowShade title="0.0.1">
+                <InlineDownload relPath="Spotify95/0.0.1.rar" text="0.0.1" />
+              </WindowShade>
             </WindowShade>
           </WindowShade>
           <WindowShade title="Past">
