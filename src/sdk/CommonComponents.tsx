@@ -80,7 +80,12 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
           />
         </div>
         <div style={{ marginLeft: 5, position: "relative", flexGrow: 1 }}>
-          <div style={{ fontWeight: "bold", paddingBottom: 5 }}>{title}</div>
+          <div
+            style={{ fontWeight: "bold", paddingBottom: 5 }}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {title}
+          </div>
           <div
             style={{
               height: `${openPercentage}%`,
