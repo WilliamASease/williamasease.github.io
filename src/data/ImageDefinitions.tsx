@@ -28,19 +28,19 @@ export const useImageDefinitions = () => {
     },
     beansJava1: {
       relPath: "projects/BeansJava1.jpg",
-      altText: "Rogolf",
+      altText: "Beans Java",
     },
     tetrisGalaxy1: {
       relPath: "projects/TetrisGalaxy1.jpg",
-      altText: "Rogolf",
+      altText: "Tetris Galaxy",
     },
     tetrisGalaxy2: {
       relPath: "projects/TetrisGalaxy2.jpg",
-      altText: "Rogolf",
+      altText: "Tetris Galaxy",
     },
     mode7Game1: {
       relPath: "projects/Mode7Game1.jpg",
-      altText: "Rogolf",
+      altText: "Mode 7 Game",
     },
     was: { relPath: "was.png", altText: "William A. Sease" },
     arrow: {
