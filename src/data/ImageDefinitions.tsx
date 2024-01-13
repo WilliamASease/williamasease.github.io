@@ -10,9 +10,21 @@ export const ImagePreloader = (props: { images: string[] }) => (
 
 export const useImageDefinitions = () => {
   const imageDefinitions = {
-    spotify95Screenshot: {
-      relPath: "Spotify95Screenshot.png",
+    spotify1: {
+      relPath: "projects/Spotify1.jpg",
       altText: "Spotify 95",
+    },
+    rogolf1: {
+      relPath: "projects/Rogolf1.jpg",
+      altText: "Rogolf",
+    },
+    rogolf2: {
+      relPath: "projects/Rogolf2.jpg",
+      altText: "Rogolf",
+    },
+    rogolf3: {
+      relPath: "projects/Rogolf3.jpg",
+      altText: "Rogolf",
     },
     was: { relPath: "was.png", altText: "William A. Sease" },
     arrow: {

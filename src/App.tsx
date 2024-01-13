@@ -55,12 +55,11 @@ function App() {
             bold
             value="William A. Sease's Personal Site"
           />
-          <InlineImage {...imageDefinitions.settings} />
         </FlexBox>
         <SiteHorizontalRule />
         <SiteBody>
           <WindowShade title="The Important Links">
-            <Anchor link="https://www.linkedin.com/in/william-sease-907bb219a?trk=people-guest_people_search-card">
+            <Anchor link="https://www.linkedin.com/in/william-a-sease-907bb219a">
               Linkedin
             </Anchor>
             <Anchor link="mailto:WilliamASease@protonmail.com">Email</Anchor>
@@ -122,7 +121,10 @@ function App() {
             <WindowShade title="Present">
               <WindowShade title="Spotify95">
                 <SiteText value="A custom react frontend for Spotify." />
-                <InlineImage {...imageDefinitions.spotify95Screenshot} />
+                <InlineImage
+                  {...imageDefinitions.spotify1}
+                  style={{ width: "50%" }}
+                />
                 <WindowShade title="0.0.1">
                   <InlineLink
                     relPath="projects/Spotify95/0.0.1/Win_0.0.1.rar"
@@ -132,7 +134,40 @@ function App() {
               </WindowShade>
             </WindowShade>
             <WindowShade title="Past">
-              <SiteText value="It's all in the github. I'll jot it down here later." />
+              <WindowShade title="Rogolf">
+                <SiteText value="Senior seminar, game made as part of a two-person team" />
+                <SiteText value="Play through 18 holes, acquiring upgrades and experiencing misfortune along the way" />
+                <SiteText value="Unity" />
+                <InlineImage
+                  {...imageDefinitions.rogolf1}
+                  style={{ width: "50%" }}
+                />
+                <InlineImage
+                  {...imageDefinitions.rogolf2}
+                  style={{ width: "50%" }}
+                />
+                <InlineImage
+                  {...imageDefinitions.rogolf3}
+                  style={{ width: "50%" }}
+                />
+              </WindowShade>
+              <WindowShade title="Tetris Galaxy">
+                <SiteText value="Apphack X (2019) Hackathon winning entry" />
+                <SiteText value="Made as part of a 4-person team" />
+                <SiteText value="Java" />
+              </WindowShade>
+              <WindowShade title="Java Mode 7">
+                <SiteText value="Implementation of Super Nintendo Mode 7 Algorithm in Java" />
+                <Anchor link="https://www.youtube.com/watch?v=7a97zlXLQ7Q">
+                  <SiteText value="View on Youtube" />
+                </Anchor>
+                <Anchor link="https://drive.google.com/file/d/1cdzMI87Hn5ebUkXUuw4GOwYnHwVuAJ-_/view">
+                  <SiteText value="Download" />
+                </Anchor>
+              </WindowShade>
+              <WindowShade title="Beans Java">
+                <SiteText value="First game, made as a college student. Swing UI" />
+              </WindowShade>
             </WindowShade>
           </WindowShade>
           <WindowShade title="The Update">

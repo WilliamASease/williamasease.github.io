@@ -117,7 +117,7 @@ export const InlineImage = (props: {
   <img
     src={`https://williamasease.github.io/build/images/${props.relPath}`}
     alt={props.altText}
-    style={{ marginTop: 5, maxWidth: "50%", ...props.style }}
+    style={{ ...props.style }}
   />
 );
 
@@ -172,7 +172,9 @@ export const SiteGutterLayout = (props: {
 }) => {
   return (
     <FlexBox orientation="row">
-      <FlexBox orientation="column">{props.children[0]}</FlexBox>
+      <FlexBox orientation="column" style={{ marginRight: "2rem" }}>
+        {props.children[0]}
+      </FlexBox>
       <FlexBox orientation="column" style={{ flexGrow: 1 }}>
         {props.children[1]}
       </FlexBox>
