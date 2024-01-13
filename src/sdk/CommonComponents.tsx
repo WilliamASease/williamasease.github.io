@@ -136,14 +136,14 @@ export const SiteHorizontalRule = () => <hr style={{ width: "100%" }} />;
 export const SiteBody = (props: { children?: ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState([0, 0]);
-  useEffect(
-    () =>
-      setDimensions([
-        ref.current?.clientHeight ?? 0,
-        ref.current?.clientWidth ?? 0,
-      ]),
-    [ref, ref.current]
-  );
+  const [clock, setClock] = useState(0);
+  useEffect(() => {
+    setDimensions([
+      ref.current?.clientHeight ?? 0,
+      ref.current?.clientWidth ?? 0,
+    ]);
+    setTimeout(() => setClock((prev) => prev + 1), 200);
+  }, [clock]);
 
   return (
     <div style={{ flexGrow: 1 }} ref={ref}>
