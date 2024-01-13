@@ -114,11 +114,13 @@ export const InlineImage = (props: {
   altText: string;
   style?: React.CSSProperties;
 }) => (
-  <img
-    src={`https://williamasease.github.io/build/images/${props.relPath}`}
-    alt={props.altText}
-    style={{ ...props.style }}
-  />
+  <div>
+    <img
+      src={`https://williamasease.github.io/build/images/${props.relPath}`}
+      alt={props.altText}
+      style={{ ...props.style }}
+    />
+  </div>
 );
 
 export const InlineLink = (props: { relPath: string; text: string }) => (

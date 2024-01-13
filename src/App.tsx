@@ -138,6 +138,11 @@ function App() {
                 <SiteText value="Senior seminar, game made as part of a two-person team" />
                 <SiteText value="Play through 18 holes, acquiring upgrades and experiencing misfortune along the way" />
                 <SiteText value="Unity" />
+                <SiteSpacer />
+                <Anchor link="https://williamasease.github.io/rogolf/web-build/">
+                  <SiteText value="Play In Browser" />
+                </Anchor>
+                <SiteSpacer />
                 <InlineImage
                   {...imageDefinitions.rogolf1}
                   style={{ width: "50%" }}
@@ -155,18 +160,48 @@ function App() {
                 <SiteText value="Apphack X (2019) Hackathon winning entry" />
                 <SiteText value="Made as part of a 4-person team" />
                 <SiteText value="Java" />
+                <SiteSpacer />
+                <Anchor link="https://github.com/swansonmp/tetrisGalaxy/blob/master">
+                  <SiteText value="Download" />
+                </Anchor>
+                <SiteSpacer />
+                <InlineImage
+                  {...imageDefinitions.tetrisGalaxy1}
+                  style={{ width: "50%" }}
+                />
+                <InlineImage
+                  {...imageDefinitions.tetrisGalaxy2}
+                  style={{ width: "50%" }}
+                />
               </WindowShade>
               <WindowShade title="Java Mode 7">
                 <SiteText value="Implementation of Super Nintendo Mode 7 Algorithm in Java" />
+                <SiteSpacer />
                 <Anchor link="https://www.youtube.com/watch?v=7a97zlXLQ7Q">
                   <SiteText value="View on Youtube" />
                 </Anchor>
+                <SiteSpacer />
+
                 <Anchor link="https://drive.google.com/file/d/1cdzMI87Hn5ebUkXUuw4GOwYnHwVuAJ-_/view">
                   <SiteText value="Download" />
                 </Anchor>
+                <SiteSpacer />
+                <InlineImage
+                  {...imageDefinitions.mode7Game1}
+                  style={{ width: "50%" }}
+                />
               </WindowShade>
               <WindowShade title="Beans Java">
                 <SiteText value="First game, made as a college student. Swing UI" />
+                <SiteSpacer />
+                <Anchor link="https://github.com/WilliamASease/BeansJava/blob/master">
+                  <SiteText value="Download" />
+                </Anchor>
+                <SiteSpacer />
+                <InlineImage
+                  {...imageDefinitions.beansJava1}
+                  style={{ width: "50%" }}
+                />
               </WindowShade>
             </WindowShade>
           </WindowShade>

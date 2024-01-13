@@ -26,6 +26,22 @@ export const useImageDefinitions = () => {
       relPath: "projects/Rogolf3.jpg",
       altText: "Rogolf",
     },
+    beansJava1: {
+      relPath: "projects/BeansJava1.jpg",
+      altText: "Rogolf",
+    },
+    tetrisGalaxy1: {
+      relPath: "projects/TetrisGalaxy1.jpg",
+      altText: "Rogolf",
+    },
+    tetrisGalaxy2: {
+      relPath: "projects/TetrisGalaxy2.jpg",
+      altText: "Rogolf",
+    },
+    mode7Game1: {
+      relPath: "projects/Mode7Game1.jpg",
+      altText: "Rogolf",
+    },
     was: { relPath: "was.png", altText: "William A. Sease" },
     arrow: {
       relPath: "icons/arrow.png",
