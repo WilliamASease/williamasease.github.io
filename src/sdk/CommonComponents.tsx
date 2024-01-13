@@ -3,7 +3,7 @@ import { useImageDefinitions } from "../data/ImageDefinitions";
 
 export const SiteText = (props: {
   value: string;
-  big?:boolean;
+  big?: boolean;
   bold?: boolean;
   underline?: boolean;
   indent?: boolean;
@@ -15,7 +15,7 @@ export const SiteText = (props: {
       fontWeight: props.bold ? "bold" : "unset",
       textDecoration: props.underline ? "underline" : undefined,
       textIndent: props.indent ? 50 : 0,
-      fontSize: props.big ? 'larger' : undefined,
+      fontSize: props.big ? "larger" : undefined,
       ...props.style,
     }}
   >
@@ -131,18 +131,23 @@ export const Anchor = (props: { children: ReactNode; link: string }) => {
   );
 };
 
-export const SiteHorizontalRule = () => 
-    <hr style={{width:"100%"}}/>
-  
+export const SiteHorizontalRule = () => <hr style={{ width: "100%" }} />;
 
-export const SiteBody = (props:{children?:ReactNode}) => 
-{
+export const SiteBody = (props: { children?: ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
-  
-  return <div style={{flexGrow:1}} ref={ref}>
-          <div style={{height:ref.current?.clientHeight ?? 0, position:'absolute', overflowY:'scroll', width:ref.current?.clientWidth}}>
-            <div style={{width:"100%"}}>
-            {props.children}
-            </div>
-          </div>
-        </div>}
+
+  return (
+    <div style={{ flexGrow: 1 }} ref={ref}>
+      <div
+        style={{
+          height: ref.current?.clientHeight ?? 0,
+          position: "absolute",
+          overflowY: "scroll",
+          width: ref.current?.clientWidth,
+        }}
+      >
+        <div style={{ width: "100%" }}>{props.children}</div>
+      </div>
+    </div>
+  );
+};
