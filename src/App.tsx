@@ -143,6 +143,10 @@ function App() {
                   <SiteText value="Play In Browser" />
                 </Anchor>
                 <SiteSpacer />
+                <Anchor link="https://williamasease.github.io/rogolf/windows-build.rar">
+                  <SiteText value="Download for Windows (Works better)" />
+                </Anchor>
+                <SiteSpacer />
                 <InlineImage
                   {...imageDefinitions.rogolf1}
                   style={{ width: "50%" }}
@@ -175,7 +179,7 @@ function App() {
                 />
               </WindowShade>
               <WindowShade title="Java Mode 7">
-                <SiteText value="Implementation of Super Nintendo Mode 7 Algorithm in Java" />
+                <SiteText value="Implementation of the Super Nintendo's Mode 7 Algorithm in Java" />
                 <SiteSpacer />
                 <Anchor link="https://www.youtube.com/watch?v=7a97zlXLQ7Q">
                   <SiteText value="View on Youtube" />
