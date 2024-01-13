@@ -20,11 +20,11 @@ export const useImageDefinitions = () => {
       altText: "Expand",
     },
     sas: {
-      relPath: "Sas.png",
+      relPath: "Sas.jpg",
       altText: "SAS",
     },
     epic: {
-      relPath: "Epic.png",
+      relPath: "Epic.jpg",
       altText: "Epic",
     },
   };
