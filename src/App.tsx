@@ -5,6 +5,8 @@ import {
   FlexBox,
   InlineImage,
   InlineLink,
+  SiteBody,
+  SiteHorizontalRule,
   SiteSpacer,
   SiteText,
   WindowShade,
@@ -13,6 +15,7 @@ import { isMobile } from "react-device-detect";
 import { ContactForm } from "./forms/Contactform";
 import { BlogPostComponent } from "./components/BlogPostComponent";
 import { ImagePreloader, useImageDefinitions } from "./data/ImageDefinitions";
+import { TruthOfTheDay } from "./components/TruthOfTheDay";
 
 const debug = false;
 
@@ -40,10 +43,16 @@ function App() {
           marginRight: isMobile ? 5 : undefined,
           paddingLeft: 5,
           paddingRight: 5,
+          height:"100%"
         }}
       >
         <ImagePreloader images={relPathsForPreload} />
-        <SiteText bold value="William A. Sease's Personal Site" />
+        <FlexBox style={{marginTop:".5rem"}} orientation='row'>
+        <SiteText style={{flexGrow:1}}big bold value="William A. Sease's Personal Site" />
+        <SiteText value="Settings"/>
+        </FlexBox>
+        <SiteHorizontalRule/>
+        <SiteBody>
         <WindowShade title="The Important Links">
           <Anchor link="https://www.linkedin.com/in/william-sease-907bb219a?trk=people-guest_people_search-card">
             Linkedin
@@ -116,6 +125,9 @@ function App() {
         <WindowShade title="Contact">
           <ContactForm />
         </WindowShade>
+        </SiteBody>
+        <SiteHorizontalRule/>
+        <TruthOfTheDay/>
       </FlexBox>
     </FlexBox>
   );
