@@ -16,7 +16,11 @@ export const useImageDefinitions = () => {
     },
     was: { relPath: "was.png", altText: "William A. Sease" },
     arrow: {
-      relPath: "arrow.png",
+      relPath: "icons/arrow.png",
+      altText: "Expand",
+    },
+    settings: {
+      relPath: "icons/settings.png",
       altText: "Expand",
     },
     sas: {

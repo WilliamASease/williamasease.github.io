@@ -55,7 +55,7 @@ function App() {
             bold
             value="William A. Sease's Personal Site"
           />
-          <SiteText value="Settings" />
+          <InlineImage {...imageDefinitions.settings} />
         </FlexBox>
         <SiteHorizontalRule />
         <SiteBody>
@@ -78,7 +78,7 @@ function App() {
               <>
                 <SiteText bold value="Epic Systems Corporation" />
                 <SiteText value="Full Stack Software Developer" />
-                <SiteText value="MyChart “Clinicals” Division" />
+                <SiteText value="MyChart" />
                 <SiteText value="June 2021 - June 2022" />
               </>
             </SiteGutterLayout>
