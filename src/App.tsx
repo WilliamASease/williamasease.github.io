@@ -84,10 +84,7 @@ function App() {
             </SiteGutterLayout>
             <SiteSpacer />
             <SiteGutterLayout>
-              <InlineImage
-                style={{ borderRadius: 10 }}
-                {...imageDefinitions.sas}
-              />
+              <InlineImage {...imageDefinitions.sas} />
               <>
                 <SiteText bold value="SAS Institute" />
                 <SiteText value="Senior Associate Software Developer" />
@@ -97,9 +94,17 @@ function App() {
             </SiteGutterLayout>
           </WindowShade>
           <WindowShade title="Education">
-            <SiteText bold value="Appalachian State University, Boone, NC" />
-            <SiteText value="Bachelor of Science in Computer Science, May 2021" />
-            <SiteText value="Magna Cum Laude" />
+            <SiteGutterLayout>
+              <InlineImage {...imageDefinitions.appA} />
+              <>
+                <SiteText
+                  bold
+                  value="Appalachian State University, Boone, NC"
+                />
+                <SiteText value="Bachelor of Science in Computer Science, May 2021" />
+                <SiteText value="Magna Cum Laude" />
+              </>
+            </SiteGutterLayout>
           </WindowShade>
           <WindowShade title="Skills">
             <SiteText bold value="Craft" />
