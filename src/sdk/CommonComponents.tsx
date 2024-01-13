@@ -1,11 +1,4 @@
-import {
-  CSSProperties,
-  ReactNode,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
 import { useImageDefinitions } from "../data/ImageDefinitions";
 
 export const SiteText = (props: {
@@ -142,8 +135,13 @@ export const SiteHorizontalRule = () => <hr style={{ width: "100%" }} />;
 
 export const SiteBody = (props: { children?: ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [height, width] = useMemo(
-    () => [ref.current?.clientHeight, ref.current?.clientWidth],
+  const [dimensions, setDimensions] = useState([0, 0]);
+  useEffect(
+    () =>
+      setDimensions([
+        ref.current?.clientHeight ?? 0,
+        ref.current?.clientWidth ?? 0,
+      ]),
     [ref, ref.current]
   );
 
@@ -151,12 +149,15 @@ export const SiteBody = (props: { children?: ReactNode }) => {
     <div style={{ flexGrow: 1 }} ref={ref}>
       <div
         style={{
-          height: height,
+          height: dimensions[0],
           position: "absolute",
           overflowY: "scroll",
         }}
       >
-        <div style={{ width: (width ?? 0) - 12 }}>{props.children}</div>
+        <div style={{ width: (dimensions[1] ?? 0) - 12 }}>
+          <div>{dimensions[0] + "" + dimensions[1]}</div>
+          {props.children}
+        </div>
       </div>
     </div>
   );
