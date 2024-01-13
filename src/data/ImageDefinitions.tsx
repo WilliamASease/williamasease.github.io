@@ -19,6 +19,14 @@ export const useImageDefinitions = () => {
       relPath: "arrow.png",
       altText: "Expand",
     },
+    sas: {
+      relPath: "Sas.png",
+      altText: "SAS",
+    },
+    epic: {
+      relPath: "Epic.png",
+      altText: "Epic",
+    },
   };
   return {
     imageDefinitions: imageDefinitions,

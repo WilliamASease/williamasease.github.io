@@ -6,6 +6,7 @@ import {
   InlineImage,
   InlineLink,
   SiteBody,
+  SiteGutterLayout,
   SiteHorizontalRule,
   SiteSpacer,
   SiteText,
@@ -69,22 +70,31 @@ function App() {
             </Anchor>
           </WindowShade>
           <WindowShade title="File Photo">
-            <InlineImage
-              style={{ borderRadius: 10 }}
-              {...imageDefinitions.was}
-            />
+            <InlineImage {...imageDefinitions.was} />
           </WindowShade>
           <WindowShade title="Work History">
-            <WindowShade title="Epic Systems Corporation">
-              <SiteText value="Full Stack Software Developer" />
-              <SiteText value="MyChart “Clinicals” Division" />
-              <SiteText value="June 2021 - June 2022" />
-            </WindowShade>
-            <WindowShade title="SAS Institute">
-              <SiteText value="Senior Associate Software Developer" />
-              <SiteText value="Health & Life Sciences" />
-              <SiteText value="July 2022 - Present" />
-            </WindowShade>
+            <SiteGutterLayout>
+              <InlineImage {...imageDefinitions.epic} />
+              <>
+                <SiteText bold value="Epic Systems Corporation" />
+                <SiteText value="Full Stack Software Developer" />
+                <SiteText value="MyChart “Clinicals” Division" />
+                <SiteText value="June 2021 - June 2022" />
+              </>
+            </SiteGutterLayout>
+            <SiteSpacer />
+            <SiteGutterLayout>
+              <InlineImage
+                style={{ borderRadius: 10 }}
+                {...imageDefinitions.sas}
+              />
+              <>
+                <SiteText bold value="SAS Institute" />
+                <SiteText value="Senior Associate Software Developer" />
+                <SiteText value="Health & Life Sciences" />
+                <SiteText value="July 2022 - Present" />
+              </>
+            </SiteGutterLayout>
           </WindowShade>
           <WindowShade title="Education">
             <SiteText bold value="Appalachian State University, Boone, NC" />

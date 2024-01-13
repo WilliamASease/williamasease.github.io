@@ -1,4 +1,11 @@
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
+import {
+  CSSProperties,
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useImageDefinitions } from "../data/ImageDefinitions";
 
 export const SiteText = (props: {
@@ -157,5 +164,18 @@ export const SiteBody = (props: { children?: ReactNode }) => {
         <div style={{ width: (dimensions[1] ?? 0) - 12 }}>{props.children}</div>
       </div>
     </div>
+  );
+};
+
+export const SiteGutterLayout = (props: {
+  children: [ReactElement, ReactElement];
+}) => {
+  return (
+    <FlexBox orientation="row">
+      <FlexBox orientation="column">{props.children[0]}</FlexBox>
+      <FlexBox orientation="column" style={{ flexGrow: 1 }}>
+        {props.children[1]}
+      </FlexBox>
+    </FlexBox>
   );
 };
