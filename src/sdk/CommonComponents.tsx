@@ -154,10 +154,7 @@ export const SiteBody = (props: { children?: ReactNode }) => {
           overflowY: "scroll",
         }}
       >
-        <div style={{ width: (dimensions[1] ?? 0) - 12 }}>
-          <div>{dimensions[0] + "" + dimensions[1]}</div>
-          {props.children}
-        </div>
+        <div style={{ width: (dimensions[1] ?? 0) - 12 }}>{props.children}</div>
       </div>
     </div>
   );
