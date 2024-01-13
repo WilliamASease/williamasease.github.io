@@ -36,7 +36,7 @@ function App() {
       <FlexBox
         orientation="column"
         style={{
-          width: isMobile ? "100%" : 1000,
+          width: isMobile ? "90%" : 1000,
           flexGrow: 1,
           backgroundColor: "white",
           marginLeft: isMobile ? 5 : undefined,
