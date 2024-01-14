@@ -42,7 +42,11 @@ export const useImageDefinitions = () => {
       relPath: "projects/Mode7Game1.jpg",
       altText: "Mode 7 Game",
     },
-    was: { relPath: "was.png", altText: "William A. Sease" },
+    william: { relPath: "portraits/was.png", altText: "William A. Sease" },
+    napoleon: {
+      relPath: "portraits/napoleon.jpg",
+      altText: "Napoleon the Cat",
+    },
     arrow: {
       relPath: "icons/arrow.png",
       altText: "Expand",

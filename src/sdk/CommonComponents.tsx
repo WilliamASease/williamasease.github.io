@@ -54,13 +54,20 @@ export const FlexBox = (props: FlexBoxProps) => (
   </div>
 );
 
-export const WindowShade = (props: { children?: ReactNode; title: string }) => {
-  const { children = "Empty Windowshade. This is probably a mistake.", title } =
-    props;
+export const WindowShade = (props: {
+  children?: ReactNode;
+  alwaysOpen?: boolean;
+  title: string;
+}) => {
+  const {
+    children = "Empty Windowshade. This is probably a mistake.",
+    alwaysOpen = false,
+    title,
+  } = props;
   const { imageDefinitions } = useImageDefinitions();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(alwaysOpen);
 
-  const [openPercentage, setOpenPercentage] = useState(0);
+  const [openPercentage, setOpenPercentage] = useState(alwaysOpen ? 100 : 0);
 
   useEffect(() => {
     const multipler = Math.sin((openPercentage * Math.PI) / 100) + 1;
@@ -77,21 +84,30 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
     <FlexBox orientation="column" style={{ paddingTop: 5, paddingBottom: 5 }}>
       <FlexBox orientation="row" style={{ width: "100%" }}>
         <div>
-          <img
-            onClick={() => setIsOpen(!isOpen)}
-            alt={imageDefinitions.arrow.relPath}
-            style={{
-              width: 20,
-              height: 20,
-              rotate: `${(openPercentage / 100) * 90}deg`,
-            }}
-            src={`https://williamasease.github.io/build/images/${imageDefinitions.arrow.relPath}`}
-          />
+          {alwaysOpen ? (
+            <span style={{ marginTop: 20, marginRight: 20 }} />
+          ) : (
+            <img
+              onClick={() => setIsOpen(!isOpen)}
+              alt={imageDefinitions.arrow.relPath}
+              style={{
+                width: 20,
+                height: 20,
+                rotate: `${(openPercentage / 100) * 90}deg`,
+                cursor: "pointer",
+              }}
+              src={`https://williamasease.github.io/build/images/${imageDefinitions.arrow.relPath}`}
+            />
+          )}
         </div>
         <div style={{ marginLeft: 5, position: "relative", flexGrow: 1 }}>
           <div
-            style={{ fontWeight: "bold", paddingBottom: 5 }}
-            onClick={() => setIsOpen(!isOpen)}
+            style={{
+              fontWeight: "bold",
+              paddingBottom: 5,
+              cursor: alwaysOpen ? undefined : "pointer",
+            }}
+            onClick={() => (alwaysOpen ? null : setIsOpen(!isOpen))}
           >
             {title}
           </div>
@@ -112,16 +128,18 @@ export const WindowShade = (props: { children?: ReactNode; title: string }) => {
 export const InlineImage = (props: {
   relPath: string;
   altText: string;
+  noDiv?: boolean;
   style?: React.CSSProperties;
-}) => (
-  <div>
+}) => {
+  const img = (
     <img
       src={`https://williamasease.github.io/build/images/${props.relPath}`}
       alt={props.altText}
       style={{ ...props.style }}
     />
-  </div>
-);
+  );
+  return props.noDiv ? img : <div>{img}</div>;
+};
 
 export const InlineLink = (props: { relPath: string; text: string }) => (
   <Anchor link={`https://williamasease.github.io/build/${props.relPath}`}>
