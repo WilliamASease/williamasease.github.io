@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode, useState } from "react";
-import { SiteText } from "../sdk/CommonComponents";
+import { FlexBox, SiteText } from "../sdk/CommonComponents";
 
 type ComponentPair = {
   key: string;
@@ -33,10 +33,13 @@ export const ComponentSwitcher = (props: IProps) => {
         ))}
       </div>
       {active !== -1 && (
-        <div style={{ padding: "1rem", height: height }}>
+        <FlexBox
+          orientation="column"
+          style={{ padding: "1rem", height: height }}
+        >
           <SiteText bold value={pairs[active].key} />
           {pairs[active].component}
-        </div>
+        </FlexBox>
       )}
     </div>
   );
