@@ -109,18 +109,6 @@ function App() {
               </>
             </SiteGutterLayout>
           </WindowShade>
-          <WindowShade alwaysOpen title="Skills">
-            <SiteText underline value="Craft" />
-            <SiteText value="Experience across several successful web-dev & full-stack projects" />
-            <SiteText value="Emphasis on accessability, usability, and UI design" />
-            <SiteSpacer />
-            <SiteText
-              underline
-              value="Professionalism & Interpersonal Communication"
-            />
-            <SiteText value="Enjoys collaboration" />
-            <SiteText value="Works well with developers, project management, and quality assurance" />
-          </WindowShade>
           <WindowShade alwaysOpen title="Works">
             <ComponentSwitcher pairs={works} />
           </WindowShade>

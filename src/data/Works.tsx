@@ -1,10 +1,8 @@
 import {
   Anchor,
   InlineImage,
-  InlineLink,
   SiteSpacer,
   SiteText,
-  WindowShade,
 } from "../sdk/CommonComponents";
 import { useImageDefinitions } from "./ImageDefinitions";
 
@@ -18,10 +16,9 @@ export const useWorks = () => {
         <>
           <SiteText value="A custom react frontend for Spotify." />
           <SiteSpacer />
-          <InlineLink
-            relPath="https://williamasease.github.io/Spotify95/index.html"
-            text="Download"
-          />
+          <Anchor link="https://williamasease.github.io/spotify-95">
+            {"Download"}
+          </Anchor>
           <SiteSpacer />
           <InlineImage
             {...imageDefinitions.spotify1}
