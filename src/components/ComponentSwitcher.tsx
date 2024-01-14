@@ -25,7 +25,11 @@ export const ComponentSwitcher = (props: IProps) => {
               textDecoration: "underline",
               color: active === i ? "black" : "blue",
             }}
-            onClick={() => setActive(i)}
+            onClick={() => {
+              if (i === active) {
+                setActive(-1);
+              } else setActive(i);
+            }}
           >
             {p.key}
           </span>

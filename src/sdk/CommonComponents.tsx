@@ -131,16 +131,20 @@ export const InlineImage = (props: {
   relPath: string;
   altText: string;
   noDiv?: boolean;
+  caption?: string;
   style?: React.CSSProperties;
 }) => {
   const img = (
-    <img
-      src={`https://williamasease.github.io/build/images/${props.relPath}`}
-      alt={props.altText}
-      style={{ ...props.style }}
-    />
+    <span style={{ display: "flex", flexDirection: "column" }}>
+      <img
+        src={`https://williamasease.github.io/build/images/${props.relPath}`}
+        alt={props.altText}
+        style={{ ...props.style }}
+      />
+      {props.caption && <span>{props.caption}</span>}
+    </span>
   );
-  return props.noDiv ? img : <div>{img}</div>;
+  return <div>{img}</div>;
 };
 
 export const InlineLink = (props: { relPath: string; text: string }) => (
@@ -149,15 +153,19 @@ export const InlineLink = (props: { relPath: string; text: string }) => (
   </Anchor>
 );
 
-export const Anchor = (props: { children: ReactNode; link: string }) => {
-  const { children, link } = props;
-  return (
-    <div>
-      <a href={link} target="_blank" rel="noreferrer">
-        <div>{children}</div>
-      </a>
-    </div>
+export const Anchor = (props: {
+  children: ReactNode;
+  link: string;
+  noDiv?: boolean;
+  style?: React.CSSProperties;
+}) => {
+  const { children, link, noDiv, style } = props;
+  const anchor = (
+    <a style={style} href={link} target="_blank" rel="noreferrer">
+      {children}
+    </a>
   );
+  return noDiv ? anchor : <div>{anchor}</div>;
 };
 
 export const SiteHorizontalRule = () => <hr style={{ width: "100%" }} />;

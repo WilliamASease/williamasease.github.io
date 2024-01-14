@@ -62,18 +62,48 @@ function App() {
         <SiteHorizontalRule />
         <SiteBody>
           <WindowShade alwaysOpen title="The Important Links">
-            <Anchor link="https://www.linkedin.com/in/william-a-sease-907bb219a">
+            <Anchor
+              noDiv
+              link="https://www.linkedin.com/in/william-a-sease-907bb219a"
+              style={{ marginRight: ".5rem" }}
+            >
               Linkedin
             </Anchor>
-            <Anchor link="mailto:WilliamASease@protonmail.com">Email</Anchor>
-            <Anchor link="https://github.com/WilliamASease">Github</Anchor>
-            <Anchor link="https://williamasease.github.io/seaseResume.pdf">
+            <Anchor
+              noDiv
+              link="mailto:WilliamASease@protonmail.com"
+              style={{ marginRight: ".5rem" }}
+            >
+              Email
+            </Anchor>
+            <Anchor
+              noDiv
+              link="https://github.com/WilliamASease"
+              style={{ marginRight: ".5rem" }}
+            >
+              Github
+            </Anchor>
+            <Anchor
+              noDiv
+              link="https://williamasease.github.io/seaseResume.pdf"
+              style={{ marginRight: ".5rem" }}
+            >
               Resume (PDF)
             </Anchor>
           </WindowShade>
           <WindowShade alwaysOpen title="Photos">
-            <InlineImage noDiv {...imageDefinitions.william} />
-            <InlineImage noDiv {...imageDefinitions.napoleon} />
+            <FlexBox orientation="row">
+              <InlineImage
+                noDiv
+                {...imageDefinitions.william}
+                caption="William"
+              />
+              <InlineImage
+                noDiv
+                {...imageDefinitions.napoleon}
+                caption="Napoleon"
+              />
+            </FlexBox>
           </WindowShade>
           <WindowShade alwaysOpen title="Work History">
             <SiteGutterLayout>
