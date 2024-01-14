@@ -45,17 +45,17 @@ export const useWorks = () => {
           </Anchor>
           <SiteSpacer />
           <InlineImage
-            style={{ width: 200 }}
+            style={{ width: "50%" }}
             noDiv
             {...imageDefinitions.rogolf1}
           />
           <InlineImage
-            style={{ width: 200 }}
+            style={{ width: "50%" }}
             noDiv
             {...imageDefinitions.rogolf2}
           />
           <InlineImage
-            style={{ width: 200 }}
+            style={{ width: "50%" }}
             noDiv
             {...imageDefinitions.rogolf3}
           />

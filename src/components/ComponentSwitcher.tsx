@@ -17,7 +17,7 @@ export const ComponentSwitcher = (props: IProps) => {
 
   return (
     <div>
-      <div>
+      <div style={{ margin: 10, padding: 10, border: "solid black 3px" }}>
         {pairs.map((p, i) => (
           <span
             style={{

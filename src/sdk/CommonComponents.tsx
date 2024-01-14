@@ -106,7 +106,7 @@ export const WindowShade = (props: {
           <div
             style={{
               fontWeight: "bold",
-              paddingBottom: 5,
+              marginBottom: 10,
               cursor: alwaysOpen ? undefined : "pointer",
             }}
             onClick={() => (alwaysOpen ? null : setIsOpen(!isOpen))}

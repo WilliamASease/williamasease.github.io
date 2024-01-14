@@ -139,7 +139,7 @@ function App() {
             </SiteGutterLayout>
           </WindowShade>
           <WindowShade alwaysOpen title="Works">
-            <ComponentSwitcher pairs={works} height={540} />
+            <ComponentSwitcher pairs={works} />
           </WindowShade>
           <WindowShade alwaysOpen title="The Update">
             {blogPosts.map((bp, i) => (
