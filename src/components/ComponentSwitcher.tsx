@@ -8,10 +8,11 @@ type ComponentPair = {
 
 type IProps = {
   pairs: ComponentPair[];
+  height?: number;
 };
 
 export const ComponentSwitcher = (props: IProps) => {
-  const { pairs } = props;
+  const { pairs, height } = props;
   const [active, setActive] = useState(-1);
 
   return (
@@ -25,18 +26,14 @@ export const ComponentSwitcher = (props: IProps) => {
               textDecoration: "underline",
               color: active === i ? "black" : "blue",
             }}
-            onClick={() => {
-              if (i === active) {
-                setActive(-1);
-              } else setActive(i);
-            }}
+            onClick={() => setActive(i)}
           >
             {p.key}
           </span>
         ))}
       </div>
       {active !== -1 && (
-        <div style={{ padding: "1rem" }}>
+        <div style={{ padding: "1rem", height: height }}>
           <SiteText bold value={pairs[active].key} />
           {pairs[active].component}
         </div>

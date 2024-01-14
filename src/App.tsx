@@ -4,7 +4,6 @@ import {
   Anchor,
   FlexBox,
   InlineImage,
-  InlineLink,
   SiteBody,
   SiteGutterLayout,
   SiteHorizontalRule,
@@ -140,7 +139,7 @@ function App() {
             </SiteGutterLayout>
           </WindowShade>
           <WindowShade alwaysOpen title="Works">
-            <ComponentSwitcher pairs={works} />
+            <ComponentSwitcher pairs={works} height={540} />
           </WindowShade>
           <WindowShade alwaysOpen title="The Update">
             {blogPosts.map((bp, i) => (

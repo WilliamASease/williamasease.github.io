@@ -1,5 +1,6 @@
 import {
   Anchor,
+  FlexBox,
   InlineImage,
   SiteSpacer,
   SiteText,
@@ -43,9 +44,13 @@ export const useWorks = () => {
             <SiteText value="Download for Windows (Works better)" />
           </Anchor>
           <SiteSpacer />
-          <InlineImage {...imageDefinitions.rogolf1} style={{ width: "50%" }} />
-          <InlineImage {...imageDefinitions.rogolf2} style={{ width: "50%" }} />
-          <InlineImage {...imageDefinitions.rogolf3} style={{ width: "50%" }} />
+          <FlexBox orientation="row" fullWidth>
+            <InlineImage style={{ width: 325 }} {...imageDefinitions.rogolf1} />
+            <InlineImage style={{ width: 325 }} {...imageDefinitions.rogolf2} />
+          </FlexBox>
+          <FlexBox orientation="row" fullWidth>
+            <InlineImage style={{ width: 325 }} {...imageDefinitions.rogolf3} />
+          </FlexBox>
         </>
       ),
     },
@@ -61,14 +66,16 @@ export const useWorks = () => {
             <SiteText value="Download" />
           </Anchor>
           <SiteSpacer />
-          <InlineImage
-            {...imageDefinitions.tetrisGalaxy1}
-            style={{ width: "50%" }}
-          />
-          <InlineImage
-            {...imageDefinitions.tetrisGalaxy2}
-            style={{ width: "50%" }}
-          />
+          <FlexBox orientation="row" fullWidth>
+            <InlineImage
+              style={{ width: "75%" }}
+              {...imageDefinitions.tetrisGalaxy1}
+            />
+            <InlineImage
+              style={{ width: "75%" }}
+              {...imageDefinitions.tetrisGalaxy2}
+            />
+          </FlexBox>
         </>
       ),
     },
@@ -106,7 +113,7 @@ export const useWorks = () => {
           <SiteSpacer />
           <InlineImage
             {...imageDefinitions.beansJava1}
-            style={{ width: "50%" }}
+            style={{ width: "40%" }}
           />
         </>
       ),
