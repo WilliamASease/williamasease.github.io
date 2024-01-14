@@ -15,6 +15,7 @@ export const SiteText = (props: {
   underline?: boolean;
   indent?: boolean;
   labelFor?: string;
+  onClick?: () => void;
   style?: CSSProperties;
 }) => (
   <div
@@ -25,6 +26,7 @@ export const SiteText = (props: {
       fontSize: props.big ? "larger" : undefined,
       ...props.style,
     }}
+    onClick={props.onClick}
   >
     {props.value}
   </div>
@@ -85,7 +87,7 @@ export const WindowShade = (props: {
       <FlexBox orientation="row" style={{ width: "100%" }}>
         <div>
           {alwaysOpen ? (
-            <span style={{ marginTop: 20, marginRight: 20 }} />
+            <img style={{ marginTop: 20, marginRight: 20 }} />
           ) : (
             <img
               onClick={() => setIsOpen(!isOpen)}
