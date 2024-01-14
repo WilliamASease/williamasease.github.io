@@ -18,7 +18,7 @@ export const useWorks = () => {
           <SiteText value="A custom react frontend for Spotify." />
           <SiteSpacer />
           <Anchor link="https://williamasease.github.io/spotify-95">
-            {"Download"}
+            {"Site"}
           </Anchor>
           <SiteSpacer />
           <InlineImage
