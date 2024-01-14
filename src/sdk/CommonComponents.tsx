@@ -134,15 +134,21 @@ export const InlineImage = (props: {
   caption?: string;
   style?: React.CSSProperties;
 }) => {
-  const img = (
+  const coreImg = (
+    <img
+      src={`https://williamasease.github.io/build/images/${props.relPath}`}
+      alt={props.altText}
+      style={{ ...props.style }}
+    />
+  );
+
+  const img = props.caption ? (
     <span style={{ display: "flex", flexDirection: "column" }}>
-      <img
-        src={`https://williamasease.github.io/build/images/${props.relPath}`}
-        alt={props.altText}
-        style={{ ...props.style }}
-      />
+      {coreImg}
       {props.caption && <span>{props.caption}</span>}
     </span>
+  ) : (
+    coreImg
   );
   return <div>{img}</div>;
 };

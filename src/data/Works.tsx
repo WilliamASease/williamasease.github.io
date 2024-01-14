@@ -44,13 +44,20 @@ export const useWorks = () => {
             <SiteText value="Download for Windows (Works better)" />
           </Anchor>
           <SiteSpacer />
-          <FlexBox orientation="row" fullWidth>
-            <InlineImage style={{ width: 325 }} {...imageDefinitions.rogolf1} />
-            <InlineImage style={{ width: 325 }} {...imageDefinitions.rogolf2} />
+          <FlexBox orientation="row">
+            <InlineImage
+              noDiv
+              style={{ width: "50%" }}
+              {...imageDefinitions.rogolf1}
+            />
+            <InlineImage
+              noDiv
+              style={{ width: "50%" }}
+              {...imageDefinitions.rogolf2}
+            />
           </FlexBox>
-          <FlexBox orientation="row" fullWidth>
-            <InlineImage style={{ width: 325 }} {...imageDefinitions.rogolf3} />
-          </FlexBox>
+
+          <InlineImage style={{ width: "50%" }} {...imageDefinitions.rogolf3} />
         </>
       ),
     },
