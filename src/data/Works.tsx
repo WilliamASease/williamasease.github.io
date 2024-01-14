@@ -21,6 +21,10 @@ export const useWorks = () => {
             {"Site"}
           </Anchor>
           <SiteSpacer />
+          <Anchor link="https://github.com/WilliamASease/spotify-95">
+            {"Repository"}
+          </Anchor>
+          <SiteSpacer />
           <InlineImage
             {...imageDefinitions.spotify1}
             style={{ width: "50%" }}
@@ -42,6 +46,10 @@ export const useWorks = () => {
           <SiteSpacer />
           <Anchor link="https://williamasease.github.io/rogolf/windows-build.rar">
             <SiteText value="Download for Windows (Works better)" />
+          </Anchor>
+          <SiteSpacer />
+          <Anchor link="https://github.com/WilliamASease/rogolf">
+            {"Repository"}
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -71,8 +79,9 @@ export const useWorks = () => {
           <SiteText value="Java" />
           <SiteSpacer />
           <Anchor link="https://github.com/swansonmp/tetrisGalaxy/blob/master">
-            <SiteText value="Download" />
+            <SiteText value="Repository" />
           </Anchor>
+          <SiteSpacer />
           <SiteSpacer />
           <FlexBox orientation="row" fullWidth>
             <InlineImage
@@ -100,6 +109,10 @@ export const useWorks = () => {
 
           <Anchor link="https://drive.google.com/file/d/1cdzMI87Hn5ebUkXUuw4GOwYnHwVuAJ-_/view">
             <SiteText value="Download" />
+          </Anchor>
+          <SiteSpacer />
+          <Anchor link="https://github.com/WilliamASease/Mode7Game">
+            Repository
           </Anchor>
           <SiteSpacer />
           <InlineImage
