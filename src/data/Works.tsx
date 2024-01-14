@@ -109,22 +109,5 @@ export const useWorks = () => {
         </>
       ),
     },
-    {
-      key: "Beans Java",
-      component: (
-        <>
-          <SiteText value="First game, made as a college student. Swing UI" />
-          <SiteSpacer />
-          <Anchor link="https://github.com/WilliamASease/BeansJava/blob/master">
-            <SiteText value="Download" />
-          </Anchor>
-          <SiteSpacer />
-          <InlineImage
-            {...imageDefinitions.beansJava1}
-            style={{ width: "40%" }}
-          />
-        </>
-      ),
-    },
   ];
 };
