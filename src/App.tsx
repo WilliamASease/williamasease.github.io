@@ -141,7 +141,7 @@ function App() {
           <WindowShade alwaysOpen title="Works">
             <ComponentSwitcher pairs={works} />
           </WindowShade>
-          <WindowShade alwaysOpen title="The Update">
+          <WindowShade title="The Update">
             {blogPosts.map((bp, i) => (
               <WindowShade
                 key={i}
