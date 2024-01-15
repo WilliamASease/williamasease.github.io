@@ -56,7 +56,7 @@ export const useBlogPosts: (debug?: boolean) => BlogPost[] = (
     day: 14,
     title: "Spotify95 in a usable state",
     paragraphs: [
-      "Spotify 0.3.0 is out. It's finally in a position where it feels pleasant and stable to use.",
+      "Spotify 0.1.2 is out. It's finally in a position where it feels pleasant and stable to use.",
       "Give it a try if you like.",
     ],
   },
