@@ -33,6 +33,27 @@ export const useWorks = () => {
       ),
     },
     {
+      key: "Risk Dice Simulator",
+      component: (
+        <>
+          <SiteText value="Speed up your Risk games!" />
+          <SiteSpacer />
+          <Anchor link="https://williamasease.github.io/risk-dice-simulator-web">
+            {"Web"}
+          </Anchor>
+          <SiteSpacer />
+          <Anchor link="https://github.com/WilliamASease/risk-dice-simulator-web">
+            {"Repository"}
+          </Anchor>
+          <SiteSpacer />
+          <InlineImage
+            {...imageDefinitions.riskDiceSimulator1}
+            style={{ width: "50%" }}
+          />
+        </>
+      ),
+    },
+    {
       key: "Rogolf",
       component: (
         <>
