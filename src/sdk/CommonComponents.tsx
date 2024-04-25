@@ -167,7 +167,7 @@ export const Anchor = (props: {
 }) => {
   const { children, link, noDiv, style } = props;
   const anchor = (
-    <a style={style} href={link} target="_blank" rel="noreferrer">
+    <a style={style} href={link} rel="noreferrer">
       {children}
     </a>
   );
