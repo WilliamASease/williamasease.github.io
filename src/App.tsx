@@ -106,6 +106,7 @@ function App() {
                 noDiv
                 {...imageDefinitions.napoleon}
                 caption="Napoleon"
+                style={{marginLeft:3}}
               />
             </FlexBox>
           </WindowShade>
