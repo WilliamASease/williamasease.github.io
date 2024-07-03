@@ -18,11 +18,11 @@ export const useWorks = () => {
           <SiteText value="A custom react frontend for Spotify." />
           <SiteSpacer />
           <Anchor link="https://williamasease.github.io/spotify-95">
-            {"Site"}
+            <SiteText value={"Site"}/>
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/spotify-95">
-            {"Repository"}
+          <SiteText value={"Repository"}/>
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -39,11 +39,11 @@ export const useWorks = () => {
           <SiteText value="Speed up your Risk games!" />
           <SiteSpacer />
           <Anchor link="https://williamasease.github.io/risk-dice-simulator-web">
-            {"Web"}
+          <SiteText value={"Web"}/>
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/risk-dice-simulator-web">
-            {"Repository"}
+          <SiteText value={"Repository"}/>
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -70,7 +70,7 @@ export const useWorks = () => {
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/rogolf">
-            {"Repository"}
+          <SiteText value={"Repository"}/>
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -133,7 +133,7 @@ export const useWorks = () => {
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/Mode7Game">
-            Repository
+          <SiteText value='Repository'/>
           </Anchor>
           <SiteSpacer />
           <InlineImage

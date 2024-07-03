@@ -22,9 +22,11 @@ export const ComponentSwitcher = (props: IProps) => {
           <span
             style={{
               marginRight: 5,
+              padding: 2,
               cursor: "pointer",
-              textDecoration: "underline",
-              color: active === i ? "black" : "blue",
+              color: active === i ? "black" : "green",
+              backgroundColor: active === i ? 'white' : 'black',
+              border:'solid green 1px'
             }}
             onClick={() => setActive(i)}
           >

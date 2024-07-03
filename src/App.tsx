@@ -30,7 +30,7 @@ function App() {
     <FlexBox
       orientation="column"
       style={{
-        backgroundColor: "lightgrey",
+        backgroundColor: "darkGray",
         alignItems: "center",
         minHeight: "100%",
       }}
@@ -41,11 +41,14 @@ function App() {
         style={{
           width: isMobile ? "90%" : 1000,
           flexGrow: 1,
-          backgroundColor: "white",
+          backgroundColor: "black",
           marginLeft: isMobile ? 5 : undefined,
           marginRight: isMobile ? 5 : undefined,
+          marginTop:5,
+          marginBottom:5,
           paddingLeft: 5,
           paddingRight: 5,
+          border:'solid green 1px',
           height: "100%",
         }}
       >
@@ -61,34 +64,36 @@ function App() {
         <SiteHorizontalRule />
         <SiteBody>
           <WindowShade alwaysOpen title="The Important Links">
+            <FlexBox orientation={"row"}>
             <Anchor
               noDiv
               link="https://www.linkedin.com/in/william-a-sease-907bb219a"
               style={{ marginRight: ".5rem" }}
             >
-              Linkedin
+              <SiteText value='Linkedin'/>
             </Anchor>
             <Anchor
               noDiv
               link="mailto:WilliamASease@protonmail.com"
               style={{ marginRight: ".5rem" }}
             >
-              Email
+              <SiteText value='Email'/>
             </Anchor>
             <Anchor
               noDiv
               link="https://github.com/WilliamASease"
               style={{ marginRight: ".5rem" }}
             >
-              Github
+              <SiteText value='Github'/>
             </Anchor>
             <Anchor
               noDiv
               link="https://williamasease.github.io/seaseResume.pdf"
               style={{ marginRight: ".5rem" }}
             >
-              Resume (PDF)
+              <SiteText value='Resume (PDF)'/>
             </Anchor>
+            </FlexBox>
           </WindowShade>
           <WindowShade alwaysOpen title="Photos">
             <FlexBox orientation="row">

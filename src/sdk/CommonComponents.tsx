@@ -23,7 +23,9 @@ export const SiteText = (props: {
       fontWeight: props.bold ? "bold" : "unset",
       textDecoration: props.underline ? "underline" : undefined,
       textIndent: props.indent ? 50 : 0,
-      fontSize: props.big ? "larger" : undefined,
+      fontSize: props.big ? 'x-large' : 'large',
+      color:'green',
+      fontFamily:'monospace',
       ...props.style,
     }}
     onClick={props.onClick}
@@ -108,10 +110,11 @@ export const WindowShade = (props: {
               fontWeight: "bold",
               marginBottom: 10,
               cursor: alwaysOpen ? undefined : "pointer",
+              color:'white'
             }}
             onClick={() => (alwaysOpen ? null : setIsOpen(!isOpen))}
           >
-            {title}
+            <SiteText value={title}/>
           </div>
           <div
             style={{
@@ -145,7 +148,7 @@ export const InlineImage = (props: {
   const img = props.caption ? (
     <span style={{ display: "flex", flexDirection: "column" }}>
       {coreImg}
-      {props.caption && <span>{props.caption}</span>}
+      {props.caption && <SiteText value={props.caption}/>}
     </span>
   ) : (
     coreImg
@@ -155,7 +158,7 @@ export const InlineImage = (props: {
 
 export const InlineLink = (props: { relPath: string; text: string }) => (
   <Anchor link={`https://williamasease.github.io/build/${props.relPath}`}>
-    {props.text}
+    <SiteText value={props.text}/>
   </Anchor>
 );
 
