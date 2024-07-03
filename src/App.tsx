@@ -114,7 +114,7 @@ function App() {
               <InlineImage {...imageDefinitions.epic} />
               <>
                 <SiteText bold value="Epic Systems Corporation" />
-                <SiteText value="Full Stack Software Developer" />
+                <SiteText value="Software Developer" />
                 <SiteText value="MyChart" />
                 <SiteText value="June 2021 - June 2022" />
               </>
@@ -124,7 +124,7 @@ function App() {
               <InlineImage {...imageDefinitions.sas} />
               <>
                 <SiteText bold value="SAS Institute" />
-                <SiteText value="Senior Associate Software Developer" />
+                <SiteText value="Software Developer" />
                 <SiteText value="Health & Life Sciences" />
                 <SiteText value="July 2022 - Present" />
               </>
