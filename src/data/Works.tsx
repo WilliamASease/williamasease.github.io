@@ -151,7 +151,7 @@ export const useWorks = () => {
           </Anchor>
       <Anchor link="https://WilliamASease.github.io/hl_text2speech_revived">
         <SiteText value="HL TTS Revived"/></Anchor>
-        <Anchor link="https://WilliamASease.gitub.io/comic_combiner"><SiteText value="Comic Combiner"/></Anchor>
+        <Anchor link="https://WilliamASease.github.io/comic_combiner"><SiteText value="Comic Combiner"/></Anchor>
           </>
     }
   ];
