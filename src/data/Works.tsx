@@ -143,5 +143,16 @@ export const useWorks = () => {
         </>
       ),
     },
+    {
+      key:'Little things',
+      component:<>
+      <Anchor link="https://WilliamASease.github.io/AmI30">
+            <SiteText value="Am I 30?" />
+          </Anchor>
+      <Anchor link="https://WilliamASease.github.io/hl_text2speech_revived">
+        <SiteText value="HL TTS Revived"/></Anchor>
+        <Anchor link="https://WilliamASease.gitub.io/comic_combiner"><SiteText value="Comic Combiner"/></Anchor>
+          </>
+    }
   ];
 };
