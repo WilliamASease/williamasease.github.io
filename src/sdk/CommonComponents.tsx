@@ -89,7 +89,7 @@ export const WindowShade = (props: {
       <FlexBox orientation="row" style={{ width: "100%" }}>
         <div>
           {alwaysOpen ? (
-            <img style={{ marginTop: 20, marginRight: 20 }} alt="nothing" />
+            <span style={{ marginTop: 20, marginRight: 20 }} />
           ) : (
             <img
               onClick={() => setIsOpen(!isOpen)}
