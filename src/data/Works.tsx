@@ -18,11 +18,11 @@ export const useWorks = () => {
           <SiteText value="A custom react frontend for Spotify." />
           <SiteSpacer />
           <Anchor link="https://williamasease.github.io/spotify-95">
-            <SiteText value={"Site"}/>
+            <SiteText value={"Site"} />
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/spotify-95">
-          <SiteText value={"Repository"}/>
+            <SiteText value={"Repository"} />
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -39,11 +39,11 @@ export const useWorks = () => {
           <SiteText value="Speed up your Risk games!" />
           <SiteSpacer />
           <Anchor link="https://williamasease.github.io/risk-dice-simulator-web">
-          <SiteText value={"Web"}/>
+            <SiteText value={"Web"} />
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/risk-dice-simulator-web">
-          <SiteText value={"Repository"}/>
+            <SiteText value={"Repository"} />
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -70,7 +70,7 @@ export const useWorks = () => {
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/rogolf">
-          <SiteText value={"Repository"}/>
+            <SiteText value={"Repository"} />
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -133,7 +133,7 @@ export const useWorks = () => {
           </Anchor>
           <SiteSpacer />
           <Anchor link="https://github.com/WilliamASease/Mode7Game">
-          <SiteText value='Repository'/>
+            <SiteText value="Repository" />
           </Anchor>
           <SiteSpacer />
           <InlineImage
@@ -144,15 +144,23 @@ export const useWorks = () => {
       ),
     },
     {
-      key:'Little things',
-      component:<>
-      <Anchor link="https://WilliamASease.github.io/AmI30">
+      key: "Little things",
+      component: (
+        <>
+          <Anchor link="https://WilliamASease.github.io/use-detect-rerender-cause">
+            <SiteText value="use-detect-rerender-cause" />
+          </Anchor>
+          <Anchor link="https://WilliamASease.github.io/AmI30">
             <SiteText value="Am I 30?" />
           </Anchor>
-      <Anchor link="https://WilliamASease.github.io/hl_text2speech_revived">
-        <SiteText value="HL TTS Revived"/></Anchor>
-        <Anchor link="https://WilliamASease.github.io/comic_combiner"><SiteText value="Comic Combiner"/></Anchor>
-          </>
-    }
+          <Anchor link="https://WilliamASease.github.io/hl_text2speech_revived">
+            <SiteText value="HL TTS Revived" />
+          </Anchor>
+          <Anchor link="https://WilliamASease.github.io/comic_combiner">
+            <SiteText value="Comic Combiner" />
+          </Anchor>
+        </>
+      ),
+    },
   ];
 };
