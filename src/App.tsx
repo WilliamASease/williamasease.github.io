@@ -74,7 +74,7 @@ function App() {
               </Anchor>
               <Anchor
                 noDiv
-                link="mailto:williamsease@protonmail.com"
+                link="mailto:williamasease@protonmail.com"
                 style={{ marginRight: ".5rem" }}
               >
                 <SiteText value="Email" />
