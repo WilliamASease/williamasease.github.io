@@ -47,7 +47,7 @@ export const useBlogPosts: (debug?: boolean) => BlogPost[] = (
     day: 28,
     title: "Welcome",
     paragraphs: [
-      "Welcome to WilliamASease.github.io 3.0! Please stay tuned for anything I'm set to reveal here.",
+      "Welcome to williamsease.github.io 3.0! Please stay tuned for anything I'm set to reveal here.",
     ],
   },
   {

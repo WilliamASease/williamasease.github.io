@@ -23,9 +23,9 @@ export const SiteText = (props: {
       fontWeight: props.bold ? "bold" : "unset",
       textDecoration: props.underline ? "underline" : undefined,
       textIndent: props.indent ? 50 : 0,
-      fontSize: props.big ? 'x-large' : 'large',
-      color:'green',
-      fontFamily:'monospace',
+      fontSize: props.big ? "x-large" : "large",
+      color: "green",
+      fontFamily: "monospace",
       ...props.style,
     }}
     onClick={props.onClick}
@@ -100,7 +100,7 @@ export const WindowShade = (props: {
                 rotate: `${(openPercentage / 100) * 90}deg`,
                 cursor: "pointer",
               }}
-              src={`https://williamasease.github.io/build/images/${imageDefinitions.arrow.relPath}`}
+              src={`https://williamsease.github.io/build/images/${imageDefinitions.arrow.relPath}`}
             />
           )}
         </div>
@@ -110,11 +110,11 @@ export const WindowShade = (props: {
               fontWeight: "bold",
               marginBottom: 10,
               cursor: alwaysOpen ? undefined : "pointer",
-              color:'white'
+              color: "white",
             }}
             onClick={() => (alwaysOpen ? null : setIsOpen(!isOpen))}
           >
-            <SiteText value={title}/>
+            <SiteText value={title} />
           </div>
           <div
             style={{
@@ -139,7 +139,7 @@ export const InlineImage = (props: {
 }) => {
   const coreImg = (
     <img
-      src={`https://williamasease.github.io/build/images/${props.relPath}`}
+      src={`https://williamsease.github.io/build/images/${props.relPath}`}
       alt={props.altText}
       style={{ ...props.style }}
     />
@@ -148,7 +148,7 @@ export const InlineImage = (props: {
   const img = props.caption ? (
     <span style={{ display: "flex", flexDirection: "column" }}>
       {coreImg}
-      {props.caption && <SiteText value={props.caption}/>}
+      {props.caption && <SiteText value={props.caption} />}
     </span>
   ) : (
     coreImg
@@ -157,8 +157,8 @@ export const InlineImage = (props: {
 };
 
 export const InlineLink = (props: { relPath: string; text: string }) => (
-  <Anchor link={`https://williamasease.github.io/build/${props.relPath}`}>
-    <SiteText value={props.text}/>
+  <Anchor link={`https://williamsease.github.io/build/${props.relPath}`}>
+    <SiteText value={props.text} />
   </Anchor>
 );
 

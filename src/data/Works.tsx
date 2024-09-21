@@ -17,11 +17,11 @@ export const useWorks = () => {
         <>
           <SiteText value="A custom react frontend for Spotify." />
           <SiteSpacer />
-          <Anchor link="https://williamasease.github.io/spotify-95">
+          <Anchor link="https://williamsease.github.io/spotify-95">
             <SiteText value={"Site"} />
           </Anchor>
           <SiteSpacer />
-          <Anchor link="https://github.com/WilliamASease/spotify-95">
+          <Anchor link="https://github.com/williamsease/spotify-95">
             <SiteText value={"Repository"} />
           </Anchor>
           <SiteSpacer />
@@ -38,11 +38,11 @@ export const useWorks = () => {
         <>
           <SiteText value="Speed up your Risk games!" />
           <SiteSpacer />
-          <Anchor link="https://williamasease.github.io/risk-dice-simulator-web">
+          <Anchor link="https://williamsease.github.io/risk-dice-simulator-web">
             <SiteText value={"Web"} />
           </Anchor>
           <SiteSpacer />
-          <Anchor link="https://github.com/WilliamASease/risk-dice-simulator-web">
+          <Anchor link="https://github.com/williamsease/risk-dice-simulator-web">
             <SiteText value={"Repository"} />
           </Anchor>
           <SiteSpacer />
@@ -61,15 +61,15 @@ export const useWorks = () => {
           <SiteText value="Play through 18 holes, acquiring upgrades and experiencing misfortune along the way" />
           <SiteText value="Unity" />
           <SiteSpacer />
-          <Anchor link="https://williamasease.github.io/rogolf/web-build/">
+          <Anchor link="https://williamsease.github.io/rogolf/web-build/">
             <SiteText value="Play In Browser" />
           </Anchor>
           <SiteSpacer />
-          <Anchor link="https://williamasease.github.io/rogolf/windows-build.rar">
+          <Anchor link="https://williamsease.github.io/rogolf/windows-build.rar">
             <SiteText value="Download for Windows (Works better)" />
           </Anchor>
           <SiteSpacer />
-          <Anchor link="https://github.com/WilliamASease/rogolf">
+          <Anchor link="https://github.com/williamsease/rogolf">
             <SiteText value={"Repository"} />
           </Anchor>
           <SiteSpacer />
@@ -132,7 +132,7 @@ export const useWorks = () => {
             <SiteText value="Download" />
           </Anchor>
           <SiteSpacer />
-          <Anchor link="https://github.com/WilliamASease/Mode7Game">
+          <Anchor link="https://github.com/williamsease/Mode7Game">
             <SiteText value="Repository" />
           </Anchor>
           <SiteSpacer />
@@ -147,16 +147,16 @@ export const useWorks = () => {
       key: "Little things",
       component: (
         <>
-          <Anchor link="https://WilliamASease.github.io/use-detect-rerender-cause">
+          <Anchor link="https://williamsease.github.io/use-detect-rerender-cause">
             <SiteText value="use-detect-rerender-cause" />
           </Anchor>
-          <Anchor link="https://WilliamASease.github.io/AmI30">
+          <Anchor link="https://williamsease.github.io/AmI30">
             <SiteText value="Am I 30?" />
           </Anchor>
-          <Anchor link="https://WilliamASease.github.io/hl_text2speech_revived">
+          <Anchor link="https://williamsease.github.io/hl_text2speech_revived">
             <SiteText value="HL TTS Revived" />
           </Anchor>
-          <Anchor link="https://WilliamASease.github.io/comic_combiner">
+          <Anchor link="https://williamsease.github.io/comic_combiner">
             <SiteText value="Comic Combiner" />
           </Anchor>
         </>
