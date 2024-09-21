@@ -51,7 +51,7 @@ export const useImageDefinitions = () => {
       relPath: "projects/RiskDiceSimulator1.png",
       altText: "Risk Dice Simulator",
     },
-    william: { relPath: "portraits/william.png", altText: "William A. Sease" },
+    william: { relPath: "portraits/william.png", altText: "William Sease" },
     napoleon: {
       relPath: "portraits/napoleon.jpg",
       altText: "Napoleon the Cat",

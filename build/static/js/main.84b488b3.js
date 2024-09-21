@@ -17762,7 +17762,7 @@
             },
             william: {
               relPath: "portraits/william.png",
-              altText: "William A. Sease",
+              altText: "William Sease",
             },
             napoleon: {
               relPath: "portraits/napoleon.jpg",
@@ -19179,7 +19179,7 @@
                   style: { flexGrow: 1 },
                   big: !0,
                   bold: !0,
-                  value: "William A. Sease's Personal Site",
+                  value: "William Sease's Personal Site",
                 }),
               }),
               (0, c.jsx)(b, {}),

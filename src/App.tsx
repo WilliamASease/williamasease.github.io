@@ -58,7 +58,7 @@ function App() {
             style={{ flexGrow: 1 }}
             big
             bold
-            value="William A. Sease's Personal Site"
+            value="William Sease's Personal Site"
           />
         </FlexBox>
         <SiteHorizontalRule />
